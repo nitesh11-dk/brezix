@@ -5,11 +5,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 interface CircleButtonProps {
-  size?: string; 
+  size?: string; // Tailwind width/height e.g. 'w-16 h-16'
   icon: React.ComponentType<{ size?: number; strokeWidth?: number }>;
   className?: string;
-  animateRipple?: boolean; 
-  scale?:number
+  animateRipple?: boolean; // enable/disable GSAP ripple animation
 }
 
 const CircleButton: React.FC<CircleButtonProps> = ({
@@ -17,7 +16,6 @@ const CircleButton: React.FC<CircleButtonProps> = ({
   icon: Icon,
   className = "",
   animateRipple = true,
-  scale=1.2
 }) => {
   const rippleRef = useRef<HTMLDivElement>(null);
 
@@ -25,7 +23,7 @@ const CircleButton: React.FC<CircleButtonProps> = ({
     () => {
       if (animateRipple && rippleRef.current) {
         gsap.to(rippleRef.current, {
-          scale: scale ,
+          scale: 1.3,
           repeat: -1,
           duration: 2,
           delay: 0.1,

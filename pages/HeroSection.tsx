@@ -31,10 +31,10 @@ const HeroSection = () => {
               <p>Awesome</p>
             </div>
 
-            <p className="font-bold  text-[3.30rem] md:text-9xl md:tracking-tighter" >
+            <div className="font-bold  text-[3.30rem] md:text-9xl md:tracking-tighter" >
               Design
               <div className="animate-pulse inline-block bg-white md:w-7 ml-2 h-30  ">.</div>
-            </p>
+            </div>
 
             {/* CircleButton for small screens */}
             <div className="py-8 md:hidden relative text-black flex items-center justify-between">
