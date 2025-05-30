@@ -11,12 +11,12 @@ const inter = Inter({
 const header = () => {
   return (
     <div>
-      <header className={`absolute top-2 left-0 z-20 w-2/3 flex items-center justify-between px-8 py-6 ${inter.className}`}>
+      <header className={`absolute md:top-2 left-0 z-20 w-2/3 flex items-center justify-between px-8 py-6 ${inter.className}`}>
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
             <div className="w-4 h-4 bg-purple-500 rounded-sm"></div>
           </div>
-          <span className="text-white font-semibold text-lg">Awsmd</span>
+          <span className="text-white font-semibold text-lg">Brezix</span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8 bg-white/90 backdrop-blur-sm rounded-full px-10 py-3">
@@ -33,8 +33,8 @@ const header = () => {
   ))}
         </nav>
 
-        <div className=" fixed top-8 right-6 flex items-center space-x-6 z-100">
- <Button className="group border-none relative overflow-hidden bg-white text-black text-md flex rounded-full px-4 py-3 font-medium">
+        <div className="   fixed top-4 md:top-8 right-6 flex items-center space-x-6 z-100">
+ <Button className=" hidden md:flex  group border-none relative overflow-hidden bg-white text-black text-md  rounded-full px-4 py-3 font-medium">
 
   <div className="absolute inset-0 rounded-3xl w-0 h-full bg-blue-600 transition-all duration-200 ease-linear group-hover:w-full z-0"></div>
 
