@@ -19,7 +19,7 @@ const header = () => {
           <span className="text-white font-semibold text-lg">Brezix</span>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-8 bg-white/90 backdrop-blur-sm rounded-full px-10 py-3">
+        <nav className="hidden lg:flex items-center space-x-8 bg-white/90 backdrop-blur-sm rounded-full px-10 py-3">
          {navLinks.map((link, index) => (
     <a
       key={index}

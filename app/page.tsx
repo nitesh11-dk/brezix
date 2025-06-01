@@ -10,6 +10,7 @@ export default function LandingPage() {
 
       
       <div className="h-screen w-full  bg-red-400"></div>
+      
     </div>
   )
 }
