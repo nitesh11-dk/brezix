@@ -7,3 +7,5 @@ export const navLinks: NavLink[] = [
   { label: 'Reviews', href: '#' ,animated: true},
   { label: 'Contact Us', href: '#' ,animated: true},
 ];
+
+export const menuItems: string[] = ["Home", "Services", "About Us", "Portfolio", "Review", "Contact Us"];

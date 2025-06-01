@@ -6,7 +6,7 @@ import CircularText from "@/components/CircularTextEffect";
 const HeroSection = () => {
   return (
     <div>
-      <main className="h-screen  bg-yellow-200   p-2">
+      <main className="h-screen  p-2">
         <div className="relative overflow-hidden h-full w-full rounded-2xl sm:rounded-[40px] ">
           {/* Background Video */}
           <video
@@ -18,7 +18,7 @@ const HeroSection = () => {
             src="/hero.mp4"
           />
 
-          <div className="absolute w-full bottom-12 p-2  flex flex-col sm:bottom-10 sm:gap-8   md:pl-10    ">
+          <div className="absolute w-full bottom-16 p-2  flex flex-col sm:bottom-10 sm:gap-8   md:pl-10    ">
             {/* Text + Icon Section */}
 
             <div className="font-freigeist  text-[3.50rem] leading-[3.4rem]  z-10 flex-1 text-white  uppercase  md:text-9xl  md:w-fit md:leading-[7rem]">
