@@ -55,10 +55,10 @@ const HeroSection = () => {
 
    <CustomerReviews/>
 
-  <div className="lg:absolute lg:bottom-0 right-20 md:scale-110 lg:scale-125
+  <div className="lg:absolute lg:bottom-0 right-20 md:ml-10 lg:ml-0 md:scale-110 lg:scale-125
   ">
     <div className="relative  bg-red-200  w-72 h-44 mt-4 md:mt-12 md:w-2/3 md:h-64 lg:h-52   lg:w-80  lg:m-0  rounded-xl  ">
-      <div className="absolute top-1/2 -translate-y-1/2 -right-24  md:scale-125 lg:scale-100  lg:top-0 lg:-left-24">
+      <div className="absolute top-1/2 -translate-y-1/2 -right-24   md:scale-125 lg:scale-100  lg:top-0 lg:-left-24">
         <CircularText
           text="click to play  click to play click "
         />
