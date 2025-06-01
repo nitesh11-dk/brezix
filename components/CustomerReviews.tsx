@@ -8,7 +8,7 @@ const inter = Inter({
 
 const CustomerReviews = () => {
   return (
-    <div className="flex  w-fit -ml-4 px-3 py-1 sm:pr-20 sm:flex-row items-center group  gap-4 hover:bg-white rounded-3xl    transition-all duration-300">
+    <div className="flex  w-fit -ml-3  px-3 py-1 sm:pr-20 sm:flex-row items-center group  gap-4 hover:bg-white rounded-3xl    transition-all duration-300">
       
       {/* Stars + Badge */}
 
