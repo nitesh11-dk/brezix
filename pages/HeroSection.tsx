@@ -18,7 +18,7 @@ const HeroSection = () => {
             src="/hero.mp4"
           />
 
-          <div className="absolute w-full bottom-0 p-2  flex flex-col sm:bottom-10 sm:gap-8   md:pl-10    ">
+          <div className="absolute w-full bottom-12 p-2  flex flex-col sm:bottom-10 sm:gap-8   md:pl-10    ">
             {/* Text + Icon Section */}
 
             <div className="font-freigeist  text-[3.50rem] leading-[3.4rem]  z-10 flex-1 text-white  uppercase  md:text-9xl  md:w-fit md:leading-[7rem]">
