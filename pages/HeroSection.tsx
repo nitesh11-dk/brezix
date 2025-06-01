@@ -1,8 +1,8 @@
 "use client";
-
 import { HiOutlineArrowLongDown } from "react-icons/hi2";
 import CircleButton from "@/helpers/CircleButton";
-import CustomerReviews from "@/components/StarVerified";
+import CustomerReviews from "@/components/CustomerReviews";
+import CircularText from "@/components/CircularTextEffect";
 const HeroSection = () => {
   return (
     <div>
@@ -52,7 +52,13 @@ const HeroSection = () => {
   </div>
 
 <div><div className=" hidden sm:flex w-1/2 h-[1px] mb-6 bg-white"></div>
-   <CustomerReviews/></div>
+   <CustomerReviews/>
+    <CircularText
+          text="Gift $10 • Refer & Earn • Receive $10 •"
+          radius={20}
+          className="text-sm font-semibold"
+        />
+   </div>
 
 
           </div>

@@ -6,7 +6,7 @@ const inter = Inter({
 })
 
 
-const StarVerified = () => {
+const CustomerReviews = () => {
   return (
     <div className="flex  w-fit -ml-4 px-3 py-1 sm:pr-20 sm:flex-row items-center group  gap-4 hover:bg-white rounded-3xl    transition-all duration-300">
       
@@ -43,4 +43,4 @@ const StarVerified = () => {
   );
 };
 
-export default StarVerified;
+export default CustomerReviews;
