@@ -70,20 +70,13 @@ const HeroSection = () => {
   muted
   loop
   playsInline
-  src="/hero.mp4"
+  src="https://servd-made-byshape.b-cdn.net/production/uploads/videos/shape-showreel-2024_looping-v3.mp4"
 ></video>
         </div>
   </div>
   </div>
    </div>
-
-
           </div>
-
-
-
-
-
         </div>
       </main>
     </div>
