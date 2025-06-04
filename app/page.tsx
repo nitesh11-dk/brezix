@@ -7,15 +7,15 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen overflow-hidden">
 
-<Menubar/>
-<Navigation/>
-<Navbar/>
-<HeroSection/>
-    
+      <Menubar />
+      <Navigation />
+      <Navbar />
+      <HeroSection />
 
-      
+
+
       <div className="h-screen w-full  bg-red-400"></div>
-      
+
     </div>
   )
 }
