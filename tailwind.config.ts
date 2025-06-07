@@ -10,10 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-		 fontFamily: {
-        freigeist: ['"Freigeist Con"', 'sans-serif'],
+      fontFamily: {
+        'space-grotesk': ['var(--font-space-grotesk)'],
       },
-}
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };

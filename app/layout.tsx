@@ -1,7 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import Providers from "./providers"; // our client-side wrapper
 
 const inter = Inter({
@@ -9,6 +9,12 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 });
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+})
 
 export const metadata: Metadata = {
   title: "Brezix",
@@ -21,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${inter.className} ${spaceGrotesk.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>
