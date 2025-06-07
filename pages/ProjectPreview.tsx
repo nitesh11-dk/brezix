@@ -3,7 +3,29 @@ import React from 'react'
 
 const ProjectPreview = () => {
   const projectImages = [
-  
+    // // Row 1
+    // {
+    //   left: [
+    //     "/project-section/screen1-1.webp",
+    //     "/project-section/screen1-2.webp"
+    //   ],
+    //   right: [
+    //     "/project-section/screen1-3.webp",
+    //     "/project-section/screen1-4.webp"
+    //   ]
+    // },
+    // // Row 2
+    // {
+    //   left: [
+    //     "/project-section/screen2-1.webp",
+    //     "/project-section/screen2-2.webp"
+    //   ],
+    //   right: [
+    //     "/project-section/screen2-3.webp",
+    //     "/project-section/screen2-4.webp"
+    //   ]
+    // },
+    // // Row 3
     {
       left: [
         "/project-section/screen3-1.webp",
@@ -54,7 +76,7 @@ const ProjectPreview = () => {
           ))}
         </div>
 
-        <div className='absolute bottom-10 md:scale-[0.60] md:-bottom-20 lg:-bottom-32 lg:right-24'>
+        <div className='absolute  bottom-10 md:scale-[0.60] md:-bottom-20 lg:-bottom-32 lg:right-24'>
           <div className='overflow-hidden w-[40%] h-[127%] absolute bottom-10 left-1/2 -translate-x-1/2 rounded-3xl md:bottom-24 md:h-[124%] lg:bottom-32 lg:-translate-x-[48%]'>
             <video
               className='object-cover'
