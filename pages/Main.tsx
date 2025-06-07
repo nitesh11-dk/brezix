@@ -10,7 +10,7 @@ import Menubar from "@/components/Menubar";
 import Projects from "@/pages/Projects";
 import Testomonial from "@/pages/Testomonial";
 import Fotter from "@/pages/Fotter";
-
+import ProjectPreview from './ProjectPreview';
 const Main = () => {
     useEffect(() => {
         const locomotiveScroll = new LocomotiveScroll();
@@ -27,6 +27,7 @@ const Main = () => {
             <Navbar />
             <Navigation />
             <HeroSection />
+            <ProjectPreview />
             <Projects />
             <Testomonial />
             <Fotter />
