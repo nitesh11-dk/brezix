@@ -10,17 +10,17 @@ import Testomonial from "@/pages/Testomonial"
 import Fotter from "@/pages/Fotter"
 export default function LandingPage() {
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen  overflow-hidden relative">
 
       <Menubar />
       <Navbar />
       <Navigation />
       <HeroSection />
-      <AboutSection />
-      <Services />
-      <ProjectPreview />
+      {/* <AboutSection /> */}
+      {/* <Services /> */}
+      {/* <ProjectPreview /> */}
       <Projects />
-      <Testomonial />
+      <Testomonial />n
       <Fotter />
 
 
