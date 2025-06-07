@@ -56,7 +56,7 @@ const HeroSection = () => {
             </div>
 
             <div>
-              
+
               <div className=" hidden  w-1/2 sm:flex  sm:w-5/6 lg:w-1/2 h-[2px] mb-6 bg-white"></div>
               <CustomerReviews />
               <div

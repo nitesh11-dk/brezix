@@ -54,12 +54,12 @@ const HoverRevealCard: React.FC<HoverRevealCardProps> = ({
       ref={containerRef}
       className='relative hover:scale-[0.95] duration-300 ease-in-out h-full'
     >
-      <div
+      <div data-scroll
         onMouseEnter={handleHoverStart}
         onMouseLeave={handleHoverEnd}
         className='w-full h-full overflow-hidden rounded-3xl'
       >
-        <img className='h-full w-full object-cover' src={imageSrc} alt={imageAlt} />
+        <img data-scroll data-scroll-speed={0.05} className='h-full w-full rounded-3xl object-cover' src={imageSrc} alt={imageAlt} />
       </div>
       <h2
         className={`absolute  flex overflow-hidden pointer-events-none z-50 top-1/2 ${position === 'left'
