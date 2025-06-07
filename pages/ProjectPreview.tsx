@@ -42,7 +42,7 @@ const ProjectPreview = () => {
 
   return (
     <div className='h-fit overflow-hidden'>
-      <div className="w-screen relative overflow-hidden py-16 bg-black">
+      <div className="w-screen relative overflow-hidden py-16 ">
         <div className='w-full overflow-hidden'>
           {projectImages.map((row, rowIndex) => (
             <div key={rowIndex} className="flex flex-row justify-between w-full mb-4 lg:mb-6">
@@ -54,7 +54,7 @@ const ProjectPreview = () => {
                     alt={`Project Preview ${rowIndex + 1}.${imgIndex + 1}`}
                     className={`${imageStyle} ${imgIndex === 0 ? 'hidden sm:block' : ''}`}
                     data-scroll
-                    data-scroll-speed={imgIndex === 0 ? 0.2 : 0.3}
+                    data-scroll-speed={imgIndex === 0 ? 0.2 : -0.3}
                     data-scroll-direction="vertical"
                   />
                 ))}
@@ -67,7 +67,7 @@ const ProjectPreview = () => {
                     alt={`Project Preview ${rowIndex + 1}.${imgIndex + 1}`}
                     className={`${imageStyle} ${imgIndex === 1 ? 'hidden sm:block' : ''}`}
                     data-scroll
-                    data-scroll-speed={imgIndex === 0 ? 0.3 : 0.2}
+                    data-scroll-speed={imgIndex === 0 ? -0.3 : 0.2}
                     data-scroll-direction="vertical"
                   />
                 ))}
