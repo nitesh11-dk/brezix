@@ -48,10 +48,10 @@ const Features = () => {
   const mobileProjects = projects.slice(0, 4);
 
   return (
-    <div className='py-6 md:py-12'>
+    <div className='py-6 md:py-8'>
       <h1 className='text-3xl md:text-5xl px-4 md:px-16 font-sm'>Featured projects</h1>
       <div className='w-full border-t-[1px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 px-4 md:px-10 py-5 md:py-10 bg-white mt-5 md:mt-10'>
-        {/* Show all projects on tablet/desktop, only 4 on mobile */}
+      
         <div className='hidden sm:contents'>
           {projects.map((project) => (
             <HoverRevealCard

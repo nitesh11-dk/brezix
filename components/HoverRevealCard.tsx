@@ -57,14 +57,14 @@ const HoverRevealCard: React.FC<HoverRevealCardProps> = ({
       <div
         onMouseEnter={handleHoverStart}
         onMouseLeave={handleHoverEnd}
-        className='w-full h-full overflow-hidden rounded-xl'
+        className='w-full h-full overflow-hidden rounded-3xl'
       >
         <img className='h-full w-full object-cover' src={imageSrc} alt={imageAlt} />
       </div>
       <h2
-        className={`absolute flex overflow-hidden pointer-events-none z-50 top-1/2 ${position === 'left'
-          ? '-left-4 translate-x-0'
-          : '-right-4 translate-x-0'
+        className={`absolute  flex overflow-hidden pointer-events-none z-50 top-1/2 ${position === 'left'
+          ? 'left-2 translate-x-0'
+          : 'right-2 translate-x-0'
           } -translate-y-1/2 text-[7vw] font-bold`}
       >
         {text.split('').map((char, index) => (
