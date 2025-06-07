@@ -71,7 +71,7 @@ const Navigation = () => {
   }, [isOpen]);
 
   return (
-    <div className={`w-screen fixed h-screen flex text-white overflow-hidden z-[500] pointer-events-${isOpen ? 'auto' : 'none'}`}>
+    <div className={`w-screen fixed h-screen flex text-white overflow-hidden z-[500] pointer-events-none ${isOpen && 'pointer-events-auto'}`}>
       <div
         ref={container1Ref}
         className={`container-1 overflow-hidden bg-[#2722df] h-0 hidden lg:flex lg:w-[25%] flex-col justify-between`}
