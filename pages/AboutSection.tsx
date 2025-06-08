@@ -25,7 +25,7 @@ const AgencySection = () => {
 
                     <img
                         src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt="Meeting" G
+                        alt="Meeting"
                         className="w-40  object-cover rounded-lg left-2/3 bottom-2   absolute lg:bottom-4   lg:w-48"
                     />
 

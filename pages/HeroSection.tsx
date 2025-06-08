@@ -3,7 +3,28 @@ import { HiOutlineArrowLongDown } from "react-icons/hi2";
 import CircleButton from "@/helpers/CircleButton";
 import CustomerReviews from "@/components/CustomerReviews";
 import CircularText from "@/components/CircularTextEffect";
+import React from "react";
+
 const HeroSection = () => {
+  const [isVideoControlled, setIsVideoControlled] = React.useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  const handleCircleClick = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.controls = true;
+      setIsVideoControlled(true);
+    }
+  };
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.controls = false;
+      setIsVideoControlled(false);
+    }
+  };
+
   return (
     <div>
       <main className="h-screen  p-2">
@@ -64,16 +85,22 @@ const HeroSection = () => {
   "
               >
                 <div className="relative  bg-red-200  w-72 h-44 mt-4 md:mt-12 md:w-2/3 md:h-64 lg:h-52   lg:w-80  lg:m-0  rounded-xl  ">
-                  <div className="absolute top-1/2 -translate-y-1/2 -right-24   md:scale-125 lg:scale-90  lg:top-0 lg:-left-28">
+                  <div
+                    className={`absolute top-1/2 -translate-y-1/2 -right-24   md:scale-125 lg:scale-90  lg:top-0 lg:-left-28 cursor-pointer transition-opacity duration-300 ${isVideoControlled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                      }`}
+                    onClick={handleCircleClick}
+                  >
                     <CircularText text="click to play  click to play click " />
                   </div>
                   <div className="w-full h-full rounded-xl overflow-hidden">
                     <video
-                      className="w-full h-full object-cover"
+                      ref={videoRef}
+                      className="w-full h-full object-cover cursor-pointer"
                       autoPlay
                       muted
                       loop
                       playsInline
+                      onClick={handleVideoClick}
                       src="https://servd-made-byshape.b-cdn.net/production/uploads/videos/shape-showreel-2024_looping-v3.mp4"
                     ></video>
                   </div>
