@@ -3,15 +3,19 @@ import React from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 import { RiMenu4Line, RiCloseLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button"
-import { useMenu } from "@/context/MenuContext"; // 👈
+import { useMenu } from "@/context/MenuContext";
+import { useForm } from "@/context/FormContext";
 
 const Menubar = () => {
   const { toggleMenu, isOpen } = useMenu();
+  const { openForm } = useForm();
 
   return (
     <div className=" z-[1000]  fixed top-4 md:top-8 right-6 flex items-center space-x-6 ">
-      <Button className=" hidden md:flex  group border-none relative overflow-hidden bg-white text-black text-md  rounded-full px-4 py-3 font-medium">
-
+      <Button
+        onClick={openForm}
+        className=" hidden md:flex  group border-none relative overflow-hidden bg-white text-black text-md  rounded-full px-4 py-3 font-medium"
+      >
         <div className="absolute inset-0 rounded-3xl w-0 h-full bg-blue-600 transition-all duration-200 ease-linear group-hover:w-full z-0"></div>
 
         <span className="z-10 mr-1 text-xl transition-colors duration-300 group-hover:text-white">+</span>
@@ -35,7 +39,6 @@ const Menubar = () => {
         )}
       </span>
     </div>
-
   )
 }
 

@@ -1,11 +1,13 @@
 import { NavLink } from "@/types";
 
+// Add Discord webhook URL
+export const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1381145489918918666/Lp8ZHdR9wnRBmzoRE3xPGGPfchezmuCHV0kFX1VQ3wJkLJfY_gbp2uSz-zV3jSNpFWXd";
 
 export const navLinks: NavLink[] = [
   { label: 'About us', href: '#aboutus', animated: true },
   { label: 'Cases', href: '#cases', animated: true },
   { label: 'Reviews', href: '#reviews', animated: true },
-  { label: 'Contact Us', href: '#', animated: true },
+  { label: 'Contact Us', href: '#contact', animated: true },
 ];
 
 export const menuItems: string[] = ["Home", "Services", "AboutUs", "Portfolio", "Reviews", "Contact Us"];

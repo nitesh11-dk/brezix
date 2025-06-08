@@ -1,20 +1,15 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Space_Grotesk } from "next/font/google";
-import Providers from "./providers"; // our client-side wrapper
+import { Inter } from "next/font/google";
+import { Providers } from "./providers";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
 });
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-grotesk',
-})
 
 export const metadata: Metadata = {
   title: "Brezix",
@@ -27,9 +22,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.className}`}>
       <body>
         <Providers>{children}</Providers>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#333',
+              color: '#fff',
+              padding: '16px',
+              borderRadius: '8px',
+            },
+          }}
+        />
       </body>
     </html>
   );

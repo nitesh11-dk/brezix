@@ -14,6 +14,7 @@ import Projects from "@/pages/Projects";
 import Testomonial from "@/pages/Testomonial";
 import Fotter from "@/pages/Fotter";
 import { Leva } from 'leva'
+import ContactForm from "@/components/ContactForm";
 
 const Main = () => {
     useEffect(() => {
@@ -38,6 +39,7 @@ const Main = () => {
             <Projects />
             <Testomonial />
             <Fotter />
+            <ContactForm />
         </div>
     );
 };
