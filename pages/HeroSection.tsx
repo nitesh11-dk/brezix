@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div>
+    <div id="home">
       <main className="h-screen  p-2">
         <div className="relative overflow-hidden h-full w-full rounded-2xl sm:rounded-[40px] ">
           {/* Background Video */}

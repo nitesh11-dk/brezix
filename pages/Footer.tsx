@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full bg-[rgb(20,19,30)]">
+    <footer id="contact-us" className="w-full bg-[rgb(20,19,30)]">
       <div className="w-full flex flex-col items-start justify-center py-8 md:py-12 lg:py-10">
         <hr className="w-[90%] md:w-[85%] lg:w-[82%] border-t border-gray-700 my-6 md:my-8 lg:my-10 mx-auto" />
         <h1 className="text-white px-4 md:px-16 lg:px-32 text-2xl sm:text-4xl  xl:text-5xl text-left md:max-w-[85%] lg:max-w-7xl mb-6 md:mb-8 lg:mb-12">

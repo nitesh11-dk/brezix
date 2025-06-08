@@ -4,13 +4,13 @@ import { NavLink } from "@/types";
 export const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1381145489918918666/Lp8ZHdR9wnRBmzoRE3xPGGPfchezmuCHV0kFX1VQ3wJkLJfY_gbp2uSz-zV3jSNpFWXd";
 
 export const navLinks: NavLink[] = [
-  { label: 'About us', href: '#about', animated: true },
-  { label: 'Cases', href: '#cases', animated: true },
+  { label: 'About us', href: '#aboutus', animated: true },
+  { label: 'Projects', href: '#projects', animated: true },
   { label: 'Reviews', href: '#reviews', animated: true },
   { label: 'Contact Us', href: '#contact', animated: true },
 ];
 
-export const menuItems: string[] = ["Home", "Services", "AboutUs", "Portfolio", "Reviews", "Contact Us"];
+export const menuItems: string[] = ["Home", "Services", "AboutUs", "Projects", "Reviews", "Contact Us"];
 
 export const testimonialCardTransforms = [
   {
@@ -121,7 +121,7 @@ export const contactInfo = {
   },
   whatsapp: "https://wa.me/919403080767",
   telegram: "https://telegram.me/+919403080767",
-  discord: "https://discord.gg/4kcbuCKs"
+  discord: "https://discord.gg/DwQFsgYr"
 };
 
 interface Service {
