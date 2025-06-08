@@ -33,7 +33,7 @@ const Main = () => {
             <Navigation />
             <HeroSection />
             <AboutSection />
-            <Services />
+            {/* <Services /> */}
 
             <ProjectPreview />
             <Projects />
