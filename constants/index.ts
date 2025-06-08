@@ -124,7 +124,7 @@ export const contactInfo = {
   discord: "https://discord.gg/4kcbuCKs"
 };
 
-export interface Service {
+interface Service {
   title: string;
   description: string;
   image: string;
@@ -137,7 +137,7 @@ export const servicesData: Service[] = [
   {
     title: "UI/UX Design",
     description:
-      "Digital Alchemy - Transforming pixels into pure user delight. We fuse beauty and brains, sculpting interfaces that feel like second nature. Our creations aren't just eye candy - they're conversion machines.",
+      "Digital Alchemy - Transforming pixels into pure user delight. We fuse beauty and brains, sculpting interfaces that feel like second nature. Our creations aren’t just eye candy - they’re conversion machines.",
     image:
       "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364730_Icon%20(1).svg",
     bgColor: "bg-[#ECECFB]",
@@ -147,7 +147,7 @@ export const servicesData: Service[] = [
   {
     title: "Product Design",
     description:
-      "Innovation sculptors - Carving tomorrow's must-haves from raw inspiration. We fine-tune each element to tackle genuine pain points and wow your target audience.",
+      "Innovation sculptors - Carving tomorrow’s must-haves from raw inspiration. We fine-tune each element to tackle genuine pain points and wow your target audience.",
     image:
       "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364731_Icon%20(2).svg",
     bgColor: "bg-[#ECECFB]",
@@ -167,7 +167,7 @@ export const servicesData: Service[] = [
   {
     title: "Branding",
     description:
-      "Distilling your soul into visual gold. We craft brand DNA that screams 'you' without saying a word.",
+      "Distilling your soul into visual gold. We craft brand DNA that screams ‘you’ without saying a word.",
     image:
       "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364734_Icon%20(5).svg",
     bgColor: "bg-[#ECECFB]",
@@ -205,6 +205,7 @@ export const servicesData: Service[] = [
     colSpan: "md:col-span-2 lg:col-span-1",
   },
 ];
+
 
 export const projectImages = [
   // // Row 1

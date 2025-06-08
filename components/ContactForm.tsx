@@ -46,7 +46,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className='z-[999]'>
+        <div className='z-[1000]'>
             {isFormOpen && (
                 <div
                     className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"

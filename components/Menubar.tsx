@@ -11,7 +11,7 @@ const Menubar = () => {
   const { openForm } = useForm();
 
   return (
-    <div className=" z-[1000]  fixed top-4 md:top-8 right-6 flex items-center space-x-6 ">
+    <div className=" z-[799]  fixed top-4 md:top-8 right-6 flex items-center space-x-6 ">
       <Button
         onClick={openForm}
         className=" hidden md:flex  group border-none relative overflow-hidden bg-white text-black text-md  rounded-full px-4 py-3 font-medium"

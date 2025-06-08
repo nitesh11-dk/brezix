@@ -8,7 +8,7 @@ interface MenuContextType {
 
 const MenuContext = createContext<MenuContextType>({
   isOpen: false,
-  toggleMenu: () => {},
+  toggleMenu: () => { },
 });
 
 export const useMenu = () => useContext(MenuContext);
