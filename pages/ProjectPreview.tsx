@@ -1,42 +1,9 @@
 "use client"
 import React from 'react'
+import { projectImages } from '@/constants'
 
 const ProjectPreview = () => {
-  const projectImages = [
-    // // Row 1
-    // {
-    //   left: [
-    //     "/project-section/screen1-1.webp",
-    //     "/project-section/screen1-2.webp"
-    //   ],
-    //   right: [
-    //     "/project-section/screen1-3.webp",
-    //     "/project-section/screen1-4.webp"
-    //   ]
-    // },
-    // // Row 2
-    // {
-    //   left: [
-    //     "/project-section/screen2-1.webp",
-    //     "/project-section/screen2-2.webp"
-    //   ],
-    //   right: [
-    //     "/project-section/screen2-3.webp",
-    //     "/project-section/screen2-4.webp"
-    //   ]
-    // },
-    // // Row 3
-    {
-      left: [
-        "/project-section/screen3-1.webp",
-        "/project-section/screen3-2.webp"
-      ],
-      right: [
-        "/project-section/screen3-3.webp",
-        "/project-section/screen3-4.webp"
-      ]
-    }
-  ]
+
 
   const imageStyle = "rounded-3xl w-36 md:w-44 lg:w-72 lg:rounded-[3rem]"
 

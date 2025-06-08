@@ -163,7 +163,7 @@ const TestimonialCard = ({
 
 const Testimonial = () => {
     return (
-        <div className="w-screen h-[45vh] lg:h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center perspective-1000">
+        <div id='reviews' className="w-screen h-[45vh] lg:h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center perspective-1000">
             <div className="relative scale-50 md:scale-75 lg:scale-110 w-full h-full max-w-7xl mx-auto flex items-center justify-center  lg:translate-y-20">
                 {testimonialData.map((testimonial, index) => (
                     <TestimonialCard

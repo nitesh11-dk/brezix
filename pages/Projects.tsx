@@ -4,51 +4,14 @@
 import React from 'react';
 import HoverRevealCard from '@/components/HoverRevealCard';
 import Link from 'next/link';
+import { projects } from '@/constants';
 
-const projects = [
-  {
-    id: 1,
-    text: "VYSE",
-    imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
-    imageAlt: "Project 1",
-  },
-  {
-    id: 2,
-    text: "OCHI",
-    imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
-    imageAlt: "Project 2",
-  },
-  {
-    id: 3,
-    text: "NOVA",
-    imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
-    imageAlt: "Project 3",
-  },
-  {
-    id: 4,
-    text: "APEX",
-    imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
-    imageAlt: "Project 4",
-  },
-  {
-    id: 5,
-    text: "LUNA",
-    imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
-    imageAlt: "Project 5",
-  },
-  {
-    id: 6,
-    text: "SPARK",
-    imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
-    imageAlt: "Project 6",
-  }
-];
 
 const Features = () => {
   const mobileProjects = projects.slice(0, 4);
 
   return (
-    <div className='py-6 md:py-8'>
+    <div id='cases' className='py-6 md:py-8'>
       <h1 className='text-3xl md:text-5xl px-4 md:px-16 font-sm'>Featured projects</h1>
       <div className='w-full border-t-[1px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 px-4 md:px-10 py-5 md:py-10 bg-white mt-5 md:mt-10'>
 
