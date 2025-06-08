@@ -4,6 +4,16 @@ import React, { useState } from "react";
 import { DISCORD_WEBHOOK_URL } from "@/constants";
 import toast from "react-hot-toast";
 
+interface FormData {
+    name: string;
+    email: string;
+    message?: string;
+    projectDetails?: string;
+    projectBudget?: string;
+    service?: string;
+    projectLink?: string;
+}
+
 export interface DiscordMessage {
     embeds: {
         title: string;
@@ -21,7 +31,7 @@ export interface DiscordMessage {
 }
 
 interface DiscordSenderProps {
-    message: DiscordMessage;
+    formData: FormData;
     onSuccess?: () => void;
     onError?: (error: Error) => void;
     children?: React.ReactNode;
@@ -33,7 +43,38 @@ interface ButtonProps {
     children?: React.ReactNode;
 }
 
-export const sendDiscordMessage = async (message: DiscordMessage) => {
+const buildDiscordMessage = (form: FormData): DiscordMessage => {
+    const fields = [
+        { name: "🙍 Name", value: form.name },
+        { name: "📧 Email", value: form.email },
+    ];
+
+    if (form.message) fields.push({ name: "💬 Message", value: form.message });
+    if (form.projectDetails) fields.push({ name: "📋 Project Details", value: form.projectDetails });
+    if (form.projectBudget) fields.push({ name: "💰 Project Budget", value: form.projectBudget });
+    if (form.service) fields.push({ name: "🛠️ Service", value: form.service });
+    if (form.projectLink) fields.push({ name: "🔗 Project Link", value: form.projectLink });
+
+    return {
+        embeds: [
+            {
+                title: "📬 New Contact Submission",
+                color: 3447003,
+                fields,
+                timestamp: new Date().toISOString(),
+                footer: {
+                    text: "Form via Website",
+                },
+            },
+        ],
+    };
+};
+
+const sendDiscordMessage = async (message: DiscordMessage) => {
+    if (!DISCORD_WEBHOOK_URL) {
+        throw new Error("Discord webhook URL is not configured");
+    }
+
     const response = await fetch(DISCORD_WEBHOOK_URL, {
         method: "POST",
         headers: {
@@ -43,17 +84,19 @@ export const sendDiscordMessage = async (message: DiscordMessage) => {
     });
 
     if (!response.ok) {
-        throw new Error(`Error sending to Discord: ${response.statusText}`);
+        throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    return true;
+    return response;
 };
 
-export default function DiscordSender({ message, onSuccess, onError, children }: DiscordSenderProps) {
+export default function DiscordSender({ formData, onSuccess, onError, children }: DiscordSenderProps) {
     const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async () => {
         setIsLoading(true);
+        const message = buildDiscordMessage(formData);
+
         try {
             await sendDiscordMessage(message);
             toast.success("Message sent successfully!");
@@ -93,4 +136,4 @@ export default function DiscordSender({ message, onSuccess, onError, children }:
             })}
         </>
     );
-} 
+}
