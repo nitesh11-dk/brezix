@@ -34,7 +34,7 @@ const AgencySection = () => {
 
                 <div className="flex flex-col justify-center py-10 md:w-1/2 lg:w-1/4">
                     <p className="text-gray-800 text-base sm:text-lg mb-2">
-                        We are a successful design agency with a team of over 4 professionals.
+                        We craft visuals that connect, captivate, and convert.
                     </p>
                     <p className="text-gray-600 mb-4">
                         Brezix helps clients to create strong and memorable brands that reflect their individuality and help achieve business goals.

@@ -48,7 +48,7 @@ const HeroSection = () => {
               <div className="text-right md:flex md:items-center md:ml-8 md:gap-10 font-bold tracking-tighter">
                 {/* CircleButton for md+ */}
                 <div className="hidden md:flex">
-                  <Link href="#about">
+                  <Link href="#aboutus">
                     <CircleButton
                       size="w-20 h-20"
                       icon={HiOutlineArrowLongDown}
