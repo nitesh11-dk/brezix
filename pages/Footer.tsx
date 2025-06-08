@@ -5,16 +5,21 @@ import { useForm } from "react-hook-form";
 import DiscordSender from "@/components/DiscordSender"; // adjust path if needed
 
 const services = [
+  "AI-Based Mobile Apps",
+  "Web to App Conversion",
+  "Portfolio Website",
   "UX/UI Design",
-  "Product Design",
   "3D Design",
-  "Branding",
-  "Webflow Development",
-  "Video Editing",
-  "Motion Ads",
+  "Landing Page",
+  "Chatbot Website",
+  "3D Product / Real Estate Showcase (VR-ready)",
+  "GenAI Web Applications",
+  "Custom Mobile App",
+  "Custom Website / Web App",
+  "Custom Desktop App",
 ];
 
-const budgetRanges = ["$10k-$20k", "$20k-$50k", "$50k-$100k", "$100k+"];
+const budgetRanges = ["₹1k-₹5k", "₹5k-₹10k", "₹10k-₹20k", "₹20k+"];
 
 interface ContactFormData {
   name: string;
