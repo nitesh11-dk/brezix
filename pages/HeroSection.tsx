@@ -4,7 +4,7 @@ import CircleButton from "@/helpers/CircleButton";
 import CustomerReviews from "@/components/CustomerReviews";
 import CircularText from "@/components/CircularTextEffect";
 import React from "react";
-
+import Link from "next/link";
 const HeroSection = () => {
   const [isVideoControlled, setIsVideoControlled] = React.useState(false);
   const videoRef = React.useRef<HTMLVideoElement>(null);
@@ -48,10 +48,12 @@ const HeroSection = () => {
               <div className="text-right md:flex md:items-center md:ml-8 md:gap-10 font-bold tracking-tighter">
                 {/* CircleButton for md+ */}
                 <div className="hidden md:flex">
-                  <CircleButton
-                    size="w-20 h-20"
-                    icon={HiOutlineArrowLongDown}
-                  />
+                  <Link href="#about">
+                    <CircleButton
+                      size="w-20 h-20"
+                      icon={HiOutlineArrowLongDown}
+                    />
+                  </Link>
                 </div>
                 <p>Awesome</p>
               </div>
