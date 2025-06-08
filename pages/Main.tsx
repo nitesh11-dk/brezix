@@ -8,7 +8,7 @@ import HeroSection from "@/pages/HeroSection";
 import Navigation from "@/pages/Navigation";
 import Menubar from "@/components/Menubar";
 import AboutSection from "@/pages/AboutSection";
-import Services from "@/pages/Services";
+// import Services from "@/pages/Services";
 import ProjectPreview from "@/pages/ProjectPreview";
 import Projects from "@/pages/Projects";
 import Testomonial from "@/pages/Testomonial";

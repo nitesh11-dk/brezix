@@ -3,8 +3,8 @@ import React from "react";
 
 const AgencySection = () => {
     return (
-        <div id="aboutus" className="h-fit bg-white px-6 py-24">
-            <p className="text-sm text-gray-500 mb-2 flex items-center gap-2">
+        <div id="aboutus" className="h-fit bg-white  px-4 py-12 md:px-8 md:py-24 ">
+            <p className="text-sm text-gray-500 mb-2 font-semibold flex items-center gap-2">
                 01 <span className="border w-6 h-[3px] inline-block bg-gray-500"></span>About Us
             </p>
             <h1 className="my-6 text-3xl sm:text-4xl md:text-5xl font-semibold text-black leading-snug mb-10 md:text-center lg:text-left lg:ml-44">

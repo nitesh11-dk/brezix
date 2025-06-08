@@ -5,15 +5,36 @@ import React from 'react';
 import HoverRevealCard from '@/components/HoverRevealCard';
 import Link from 'next/link';
 import { projects } from '@/constants';
+import { useForm } from "@/context/FormContext";
+
 
 
 const Features = () => {
+
+   const { openForm } = useForm();
+  
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        openForm();
+    };
+
   const mobileProjects = projects.slice(0, 4);
 
   return (
-    <div id='projects' className='py-6 md:py-8'>
-      <h1 className='text-3xl md:text-5xl px-4 md:px-16 font-sm'>Featured projects</h1>
-      <div className='w-full border-t-[1px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 px-4 md:px-10 py-5 md:py-10 bg-white mt-5 md:mt-10'>
+    <div id='projects' className=' px-4 py-12 md:px-8 md:py-24 '>
+       <p className="text-sm text-gray-500 font-semibold mb-2 flex items-center gap-2 md:mb-3">
+                03 <span className="border w-6 h-[3px] inline-block bg-gray-500"></span>Our Portfolio
+            </p>
+
+
+<div className='flex items-center justify-between w-full   h-fit'>
+  <h2 className=' hidden lg:flex text-gray-500 text-3xl w-1/3'>Our user-centered design encourages productivity and boosts revenue.</h2>
+  <div className='flex flex-col gap-10  items-end  '><h3 className='text-3xl md:text-4xl lg:text-6xl lg:w-2/3 opacity-80'>We don't do cookie-cutter solutions
+</h3>
+<button onClick={handleClick} className=' hidden lg:flex text-gray-500 self-center'>schedule metting</button></div>
+</div>
+
+      <div className='w-full border-t-[1px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5   py-5  bg-white mt-5 '>
 
         <div className='hidden sm:contents'>
           {projects.map((project) => (
@@ -23,6 +44,8 @@ const Features = () => {
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
               position={project.id % 2 === 0 ? 'left' : 'right'}
+              projectName={project.projectName}
+              projectDescription={project.projectDescription}
             />
           ))}
         </div>
@@ -34,10 +57,14 @@ const Features = () => {
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
               position={project.id % 2 === 0 ? 'left' : 'right'}
+              projectName={project.projectName}
+              projectDescription={project.projectDescription}
             />
           ))}
         </div>
       </div>
+
+
 
       <div className="flex justify-center mt-8 mb-4">
         <Link

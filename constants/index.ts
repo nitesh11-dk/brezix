@@ -68,50 +68,51 @@ export const testimonialCardTransforms = [
 export const testimonialData = [
   {
     id: 1,
-    name: 'Barry W.',
-    role: 'CEO of TechNest',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    name: 'Rohan Verma',
+    role: 'Founder, Digitalyaar',
+    image: 'https://randomuser.me/api/portraits/men/45.jpg',
     rating: 5,
-    comment: 'Really useful system. We got an amazing service for our company hotel bookings for our coming events.',
+    comment: 'Brezix ne meri portfolio website ekdum next level bana di. Design aur performance – dono top class!',
     bgColor: 'bg-white'
   },
   {
     id: 2,
-    name: 'Devon R.',
-    role: 'Product Lead',
-    image: 'https://randomuser.me/api/portraits/men/41.jpg',
+    name: 'Meera Iyer',
+    role: 'Product Manager, HealthFi',
+    image: 'https://randomuser.me/api/portraits/women/46.jpg',
     rating: 5,
-    comment: 'Nimbus lets us launch new features in hours, not days. Total game-changer.',
+    comment: 'The AI chatbot Brezix built for us has changed how we do customer support. Instant replies = happy users!',
     bgColor: 'bg-[#6366F1]'
   },
   {
     id: 3,
-    name: 'Thomas H.',
-    role: 'Tech Lead',
-    image: 'https://randomuser.me/api/portraits/men/44.jpg',
+    name: 'Amit Sharma',
+    role: 'Tech Lead, RealNest',
+    image: 'https://randomuser.me/api/portraits/men/52.jpg',
     rating: 5,
-    comment: 'We evaluated eight platforms before landing on Nimbus. It was not just the feature set - it was the pace of updates.',
+    comment: 'WebXR ka real estate showcase dekh ke clients impressed ho jaate hain. Kudos to team Brezix!',
     bgColor: 'bg-white'
   },
   {
     id: 4,
-    name: 'Thomas H.',
-    role: 'Tech Lead',
-    image: 'https://randomuser.me/api/portraits/men/44.jpg',
+    name: 'Nidhi Patel',
+    role: 'Co-founder, Bliss Events',
+    image: 'https://randomuser.me/api/portraits/women/50.jpg',
     rating: 5,
-    comment: 'Nimbus took a huge load off our dev team. Integrations were quick, and the platform is so reliable that we hardly ever need to check in. Highly recommended.',
+    comment: 'Brezix ki RSVP app ne hamara event planning super smooth kar diya. Bahut hi responsive team hai!',
     bgColor: 'bg-black'
   },
   {
     id: 5,
-    name: 'Sarah L.',
-    role: 'Engineering Manager',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    name: 'Harshil Joshi',
+    role: 'Marketing Head, Growzi',
+    image: 'https://randomuser.me/api/portraits/men/60.jpg',
     rating: 5,
-    comment: 'Nimbus helped streamline our entire workflow in just a few weeks. The team loves how easy it is to navigate, and we have already seen a major boost in productivity.',
+    comment: 'AI-based lead generation tool ne hamari conversion rate double kar di. Brezix is 🔥🔥🔥',
     bgColor: 'bg-white'
   }
-]
+];
+
 
 export const contactInfo = {
   email: "info@brezix.com",
@@ -249,35 +250,47 @@ export const projects = [
     text: "VYSE",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
     imageAlt: "Project 1",
+    projectName: "VYSE Creative Studio",
+    projectDescription: "A branding and visual identity project for a modern design studio focused on immersive digital experiences.",
   },
   {
     id: 2,
     text: "OCHI",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
     imageAlt: "Project 2",
+    projectName: "OCHI Portfolio",
+    projectDescription: "A portfolio website showcasing a collection of visual storytelling and user-focused design solutions.",
   },
   {
     id: 3,
     text: "NOVA",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
     imageAlt: "Project 3",
+    projectName: "NOVA Platform",
+    projectDescription: "An innovative web platform designed for creators to collaborate, share, and grow their communities.",
   },
   {
     id: 4,
     text: "APEX",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
     imageAlt: "Project 4",
+    projectName: "APEX Analytics",
+    projectDescription: "A data visualization and business intelligence dashboard built for enterprise performance monitoring.",
   },
   {
     id: 5,
     text: "LUNA",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
     imageAlt: "Project 5",
+    projectName: "LUNA App",
+    projectDescription: "A sleek mobile-first app aimed at promoting mindfulness, meditation, and daily well-being habits.",
   },
   {
     id: 6,
     text: "SPARK",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
     imageAlt: "Project 6",
+    projectName: "SPARK Campaign",
+    projectDescription: "A social media marketing campaign that boosted engagement and visibility for a lifestyle brand.",
   }
 ];
