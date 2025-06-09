@@ -1,19 +1,17 @@
 import { Inter } from 'next/font/google'
 import SlideUpText from "@/helpers/SlideUpText";
 import { navLinks } from "@/constants";
-import { useForm } from "@/context/FormContext";
+import { openContactForm } from "@/components/ContactForm";
 
 const inter = Inter({
   subsets: ['latin'],
 })
 
 const Header = () => {
-  const { openForm } = useForm();
-
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href === '#contact') {
       e.preventDefault();
-      openForm();
+      openContactForm();
     }
   };
 

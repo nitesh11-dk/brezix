@@ -1,9 +1,16 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { X, ArrowRight } from "lucide-react"
 import { useForm } from "react-hook-form"
-import { useForm as useFormContext } from "@/context/FormContext";
 import DiscordSender from "@/components/DiscordSender";
+
+// Create a global event system for form control
+type FormEventCallback = () => void;
+const formEventCallbacks: FormEventCallback[] = [];
+
+export const openContactForm = () => {
+    formEventCallbacks.forEach(callback => callback());
+};
 
 interface FormData {
     name: string;
@@ -12,7 +19,22 @@ interface FormData {
 }
 
 const ContactForm = () => {
-    const { isFormOpen, closeForm } = useFormContext();
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
+    // Register callback for form opening
+    useEffect(() => {
+        const callback = () => setIsFormOpen(true);
+        formEventCallbacks.push(callback);
+        return () => {
+            const index = formEventCallbacks.indexOf(callback);
+            if (index > -1) {
+                formEventCallbacks.splice(index, 1);
+            }
+        };
+    }, []);
+
+    const closeForm = () => setIsFormOpen(false);
+
     const {
         register,
         handleSubmit,

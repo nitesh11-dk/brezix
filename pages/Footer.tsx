@@ -4,6 +4,14 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import DiscordSender from "@/components/DiscordSender"; // adjust path if needed
 
+// Create a global event bus for form control
+type FormEventCallback = () => void;
+const formEventCallbacks: FormEventCallback[] = [];
+
+export const openContactForm = () => {
+  formEventCallbacks.forEach(callback => callback());
+};
+
 const services = [
   "AI-Based Mobile Apps",
   "Web to App Conversion",
@@ -39,6 +47,23 @@ interface BookCallFormData {
 
 const Footer: React.FC = () => {
   const [activeForm, setActiveForm] = useState<"contact" | "book_call">("contact");
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  // Register the callback when component mounts
+  React.useEffect(() => {
+    const callback = () => {
+      setIsFormVisible(true);
+      setActiveForm("contact");
+      window.scrollTo({ top: document.getElementById('contact-us')?.offsetTop, behavior: 'smooth' });
+    };
+    formEventCallbacks.push(callback);
+    return () => {
+      const index = formEventCallbacks.indexOf(callback);
+      if (index > -1) {
+        formEventCallbacks.splice(index, 1);
+      }
+    };
+  }, []);
 
   const {
     register: contactRegister,
