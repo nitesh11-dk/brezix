@@ -21,7 +21,7 @@ const Features = () => {
   const mobileProjects = projects.slice(0, 4);
 
   return (
-    <div id='projects' className=' px-4 py-12 md:px-8 md:py-24 '>
+    <div id='projects' className=' px-4 py-12 md:px-8 md:py-16 '>
        <p className="text-sm text-gray-500 font-semibold mb-2 flex items-center gap-2 md:mb-3">
                 03 <span className="border w-6 h-[3px] inline-block bg-gray-500"></span>Our Portfolio
             </p>

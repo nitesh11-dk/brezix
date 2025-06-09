@@ -125,22 +125,21 @@ export const contactInfo = {
   discord: "https://discord.gg/DwQFsgYr"
 };
 
-interface Service {
+export type Service = {
   title: string;
   description: string;
   image: string;
   bgColor: string;
   textColor: string;
   colSpan: string;
-}
+};
 
-export const servicesData: Service[] = [
+ export const servicesData: Service[] = [
   {
     title: "UI/UX Design",
     description:
       "Digital Alchemy - Transforming pixels into pure user delight. We fuse beauty and brains, sculpting interfaces that feel like second nature. Our creations aren’t just eye candy - they’re conversion machines.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364730_Icon%20(1).svg",
+    image: "https://images.unsplash.com/photo-1549642055-32e6b216962f", // Updated Unsplash link for UI/UX
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
     colSpan: "",
@@ -149,8 +148,7 @@ export const servicesData: Service[] = [
     title: "Product Design",
     description:
       "Innovation sculptors - Carving tomorrow’s must-haves from raw inspiration. We fine-tune each element to tackle genuine pain points and wow your target audience.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364731_Icon%20(2).svg",
+    image: "https://images.unsplash.com/photo-1621609764095-b040e3f05b0c", // Updated Unsplash link for Product Design
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
     colSpan: "",
@@ -159,8 +157,7 @@ export const servicesData: Service[] = [
     title: "3D Design",
     description:
       "Constructing 3D universes. We blur the line between bits and atoms, crafting experiences that feel real enough to touch.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364733_Icon%20(4).svg",
+    image: "https://images.unsplash.com/photo-1629904863339-a78b548c772c", // Updated Unsplash link for 3D Design
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
     colSpan: "",
@@ -169,8 +166,7 @@ export const servicesData: Service[] = [
     title: "Branding",
     description:
       "Distilling your soul into visual gold. We craft brand DNA that screams ‘you’ without saying a word.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364734_Icon%20(5).svg",
+    image: "https://images.unsplash.com/photo-1517486804-d450974b76c8", // Updated Unsplash link for Branding
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
     colSpan: "",
@@ -179,8 +175,7 @@ export const servicesData: Service[] = [
     title: "Webflow Development",
     description:
       "Making your website dreams come true, minus the coding nightmares. We take Webflow and turn it into your personal website factory.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364732_Icon%20(3).svg",
+    image: "https://images.unsplash.com/photo-1600861111620-30589a19c7f7", // Updated Unsplash link for Webflow Development
     bgColor: "bg-[#493EFF]",
     textColor: "text-white",
     colSpan: "lg:col-span-2",
@@ -189,8 +184,7 @@ export const servicesData: Service[] = [
     title: "Video Editing",
     description:
       "Bringing your message to life, one frame at a time. We create videos that make people stop and watch.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364736_Icon%20(7).svg",
+    image: "https://images.unsplash.com/photo-1582236166453-625406085a8a", // Updated Unsplash link for Video Editing
     bgColor: "bg-[#1E1D26]",
     textColor: "text-white",
     colSpan: "",
@@ -199,15 +193,12 @@ export const servicesData: Service[] = [
     title: "Motion Ads",
     description:
       "Breathing life into your advertising with kinetic energy. We design motion ads that stop thumbs and start conversations.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364735_Icon%20(6).svg",
+    image: "https://images.unsplash.com/photo-1616400619175-5be7286bcc80", // Updated Unsplash link for Motion Ads
     bgColor: "bg-[#1E1D26]",
     textColor: "text-white",
     colSpan: "md:col-span-2 lg:col-span-1",
   },
 ];
-
-
 export const projectImages = [
   // // Row 1
   // {

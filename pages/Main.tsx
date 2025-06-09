@@ -15,6 +15,7 @@ import Testomonial from "@/pages/Testomonial";
 import Footer from "@/pages/Footer";
 import { Leva } from 'leva'
 import ContactForm from "@/components/ContactForm";
+import Services from './Services';
 
 const Main = () => {
     useEffect(() => {
@@ -33,8 +34,7 @@ const Main = () => {
             <Navigation />
             <HeroSection />
             <AboutSection />
-            {/* <Services /> */}
-
+            <Services />
             <ProjectPreview />
             <Projects />
             <Testomonial />
@@ -45,3 +45,20 @@ const Main = () => {
 };
 
 export default Main; 
+
+//   <div className="px-4 py-12 md:px-8 md:py-16">
+
+//          <p className="text-sm text-gray-500 font-semibold mb-2 flex items-center gap-2 md:mb-3">
+//                 02 <span className="border w-6 h-[3px] inline-block bg-gray-500"></span>Our Services
+//             </p>
+
+
+// <div className='flex items-center justify-between w-full   h-fit'>
+//   <h2 className='  lg:flex text-gray-500 text-xl md:text-2xl lg:text-5xl tracking-wide lg:w-[90%]  py-2 md:mb-6'>As a tight-knit team of experts, we create memorable and emotional websites, digital experiences, and native apps.</h2>
+// </div>
+//  <div className="heading flex items-center gap-4 border-b pb-2">
+//           </div>
+
+   
+
+//     </div>
