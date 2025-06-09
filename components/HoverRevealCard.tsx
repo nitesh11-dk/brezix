@@ -93,7 +93,7 @@ const HoverRevealCard: React.FC<HoverRevealCardProps> = ({
   lg:translate-y-1/2 
   lg:opacity-0 
   lg:group-hover:opacity-100 
-  lg:group-hover:translate-y-0 
+  lg:group-hover:translate-y-0 pointer-events-none
   transition-all duration-500 ease-in-out
 '>
   <h2 className='font-bold text-black lg:text-white text-xl mb-1'>{projectName}</h2>
