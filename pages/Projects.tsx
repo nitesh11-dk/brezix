@@ -66,10 +66,10 @@ const Features = () => {
 
 
 
-      <div className="flex justify-center mt-8 mb-4">
+      <div className="flex  hover:scale-90 transition-all duration-300 ease-out justify-center mt-8 mb-4">
         <Link
           href="/projects"
-          className="group relative overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 text-black text-md rounded-full px-8 py-4 font-medium"
+          className="group relative overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 text-black text-md rounded-full px-6 lg:px-8 py-2 lg:py-4 font-medium"
         >
           <div className="absolute inset-0 w-0 h-full bg-blue-600 transition-all duration-200 ease-linear group-hover:w-full"></div>
           <div className="z-10 relative flex items-center">
