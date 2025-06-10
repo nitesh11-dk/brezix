@@ -118,7 +118,7 @@ const TestimonialCard = ({
     return (
         <div
             ref={cardRef}
-            className={`${getBgColor(index)} rounded-3xl rounded-br-none p-10 shadow-md max-w-[350px] h-fit transition-colors duration-300 absolute cursor-pointer`}
+            className={`${getBgColor(index)}  rounded-3xl rounded-br-none p-10 shadow-md max-w-[350px] h-fit transition-colors duration-300 absolute cursor-pointer select-none`}
             style={{
                 transform: `
                     translate3d(${transform.x}px, ${transform.y}px, ${transform.z}px)
@@ -135,7 +135,7 @@ const TestimonialCard = ({
         >
             <StarRating rating={testimonial.rating} starColor={getStarColor(index)} />
 
-            <p className={`mt-6 text-lg ${isDark ? 'text-white' : 'text-[#111827]'}`}>
+            <p className={`mt-6 text-lg ${isDark ? 'text-white' : 'text-[#111827]'} select-none`}>
                 {testimonial.comment}
             </p>
 
@@ -152,10 +152,10 @@ const TestimonialCard = ({
                     />
                 </div>
                 <div>
-                    <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-[#111827]'}`}>
+                    <h3 className={`font-semibold ${isDark ? 'text-white' : 'text-[#111827]'} select-none`}>
                         {testimonial.name}
                     </h3>
-                    <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{testimonial.role}</p>
+                    <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'} select-none`}>{testimonial.role}</p>
                 </div>
             </div>
         </div>
@@ -166,14 +166,14 @@ const Testimonial = () => {
     return (
         <div id='reviews' className="relative w-screen h-[84vh] md:h-[80vh] lg:h-screen bg-gradient-to-br from-gray-50 to-gray-100  flex items-center  px-4 py-12 md:px-8 md:pr-40 md:py-24 justify-center flex-col lg:flex-row ">
 
-       <div className='self-start lg:py-20 flex flex-col  lg:gap-20 gap-8 md:gap-14 lg:flex-col md:mb-20'>
-        <p className="text-sm text-gray-500 font-semibold mb-2 flex items-center gap-2 h-fit md:mb-3 ">
-                04 <span className="border w-6 h-[3px] inline-block bg-gray-500"></span>What Our Clients Say
-            </p>
+            <div className='self-start lg:py-20 flex flex-col  lg:gap-20 gap-8 md:gap-14 lg:flex-col md:mb-20'>
+                <p className="text-sm text-gray-500 font-semibold mb-2 flex items-center gap-2 h-fit md:mb-3 ">
+                    04 <span className="border w-6 h-[3px] inline-block bg-gray-500"></span>What Our Clients Say
+                </p>
 
-  <h2 className=' lg:flex text-gray-500 text-md md:text-xl w-full  md:w-4/5 lg:w-1/2'>Working with them was smooth and stress-free. Our connection issues were resolved faster than expected.</h2>
-  
-       </div>
+                <h2 className=' lg:flex text-gray-500 text-md md:text-xl w-full  md:w-4/5 lg:w-1/2'>Working with them was smooth and stress-free. Our connection issues were resolved faster than expected.</h2>
+
+            </div>
 
             <div className="relative scale-50 md:scale-75 lg:scale-110 w-full h-full max-w-7xl mx-auto flex items-center justify-center  lg:translate-y-20">
                 {testimonialData.map((testimonial, index) => (
@@ -186,24 +186,24 @@ const Testimonial = () => {
                 ))}
             </div>
 
-               <div className="flex hover:scale-90 transition-all duration-300 ease-out   absolute bottom-4 right-10 justify-center ">
-        <Link
-          href="/reviews"
-          className="group relative overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 text-black text-md rounded-full px-6 lg:px-8 py-2 lg:py-4 font-medium"
-        >
-          <div className="absolute inset-0 w-0 h-full bg-black transition-all duration-200 ease-linear group-hover:w-full"></div>
-          <div className="z-10 relative flex items-center">
-            <span className="mr-2 text-xl transition-colors duration-300 group-hover:text-white">+</span>
-            <div className="h-6 overflow-hidden">
-              <div className="relative flex flex-col top-0 transition-all duration-300 group-hover:-top-6 group-hover:text-white">
-                View All Reviews
-                <span>View All Reviews</span>
-              </div>
+            <div className="flex hover:scale-90 transition-all duration-300 ease-out   absolute bottom-4 right-10 justify-center ">
+                <Link
+                    href="/reviews"
+                    className="group relative overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300 text-black text-md rounded-full px-6 lg:px-8 py-2 lg:py-4 font-medium"
+                >
+                    <div className="absolute inset-0 w-0 h-full bg-black transition-all duration-200 ease-linear group-hover:w-full"></div>
+                    <div className="z-10 relative flex items-center">
+                        <span className="mr-2 text-xl transition-colors duration-300 group-hover:text-white">+</span>
+                        <div className="h-6 overflow-hidden">
+                            <div className="relative flex flex-col top-0 transition-all duration-300 group-hover:-top-6 group-hover:text-white">
+                                View All Reviews
+                                <span>View All Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
             </div>
-          </div>
-        </Link>
-      </div>
-      
+
         </div>
     )
 }
