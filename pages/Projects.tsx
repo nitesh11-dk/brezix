@@ -41,6 +41,7 @@ const Features = () => {
               position={project.id % 2 === 0 ? 'left' : 'right'}
               projectName={project.projectName}
               projectDescription={project.projectDescription}
+              projectLink={project.href}
             />
           ))}
         </div>
@@ -54,6 +55,7 @@ const Features = () => {
               position={project.id % 2 === 0 ? 'left' : 'right'}
               projectName={project.projectName}
               projectDescription={project.projectDescription}
+              projectLink={project.href}
             />
           ))}
         </div>

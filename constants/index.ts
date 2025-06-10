@@ -134,7 +134,7 @@ export type Service = {
   colSpan: string;
 };
 
- export const servicesData: Service[] = [
+export const servicesData: Service[] = [
   {
     title: "UI/UX Design",
     description:
@@ -199,6 +199,7 @@ export type Service = {
     colSpan: "md:col-span-2 lg:col-span-1",
   },
 ];
+
 export const projectImages = [
   // // Row 1
   // {
@@ -238,50 +239,62 @@ export const projectImages = [
 export const projects = [
   {
     id: 1,
-    text: "VYSE",
+    text: "INTV",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
-    imageAlt: "Project 1",
-    projectName: "VYSE Creative Studio",
-    projectDescription: "A branding and visual identity project for a modern design studio focused on immersive digital experiences.",
+    imageAlt: "IntervuAI Project",
+    projectName: "IntervuAI - AI Mock Interview Pro",
+    projectDescription:
+      "AI-powered voice-based mock interviews with instant feedback, powered by Vapi and Gemini AI.",
+    href: "https://intervuai-mock.vercel.app/",
   },
   {
     id: 2,
-    text: "OCHI",
+    text: "ASPR",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
-    imageAlt: "Project 2",
-    projectName: "OCHI Portfolio",
-    projectDescription: "A portfolio website showcasing a collection of visual storytelling and user-focused design solutions.",
+    imageAlt: "Aspire AI Project",
+    projectName: "ASPIRE AI - Career Boost Hub",
+    projectDescription:
+      "A career advancement platform offering resume generation, quiz prep, and AI-driven job insights.",
+    href: "https://aspire-ai-delta.vercel.app/",
   },
   {
     id: 3,
-    text: "NOVA",
+    text: "AVPL",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
-    imageAlt: "Project 3",
-    projectName: "NOVA Platform",
-    projectDescription: "An innovative web platform designed for creators to collaborate, share, and grow their communities.",
+    imageAlt: "AVP Landing Page",
+    projectName: "AVP Landing Page - Dance Studio",
+    projectDescription:
+      "Landing page for a dance studio built with React, Tailwind CSS, and EmailJS contact integration.",
+    href: "https://avp-landing-page.vercel.app/",
   },
   {
     id: 4,
-    text: "APEX",
+    text: "PORT",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
-    imageAlt: "Project 4",
-    projectName: "APEX Analytics",
-    projectDescription: "A data visualization and business intelligence dashboard built for enterprise performance monitoring.",
+    imageAlt: "3D Portfolio",
+    projectName: "3D Portfolio Website",
+    projectDescription:
+      "An interactive 3D personal portfolio showcasing development and design skills with engaging visuals.",
+    href: "https://niteshdk.vercel.app/",
   },
   {
     id: 5,
-    text: "LUNA",
+    text: "MPRT",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png",
-    imageAlt: "Project 5",
-    projectName: "LUNA App",
-    projectDescription: "A sleek mobile-first app aimed at promoting mindfulness, meditation, and daily well-being habits.",
+    imageAlt: "Minimal Portfolio",
+    projectName: "Minimal Portfolio Website",
+    projectDescription:
+      "A clean, elegant, and professional portfolio focused on minimal UI and user-friendly layout.",
+    href: "https://nitesh11dk.vercel.app/",
   },
   {
     id: 6,
-    text: "SPARK",
+    text: "ELCM",
     imageSrc: "https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png",
-    imageAlt: "Project 6",
-    projectName: "SPARK Campaign",
-    projectDescription: "A social media marketing campaign that boosted engagement and visibility for a lifestyle brand.",
-  }
+    imageAlt: "ElectroMart Platform",
+    projectName: "ElectroMart - E-Commerce Electronics",
+    projectDescription:
+      "MERN-stack e-commerce store with Razorpay payments, role-based access, and fast filtering.",
+    href: "https://ecommerce-client-git-main-nitesh-dks-projects.vercel.app/",
+  },
 ];
