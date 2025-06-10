@@ -49,6 +49,7 @@ interface BookCallFormData {
 const Footer: React.FC = () => {
   const [activeForm, setActiveForm] = useState<"contact" | "book_call">("contact");
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const [hasAttemptedSubmit, setHasAttemptedSubmit] = useState(false);
 
   // Register the callback when component mounts
   React.useEffect(() => {
@@ -110,8 +111,8 @@ const Footer: React.FC = () => {
   };
 
   const onContactSubmit = (data: ContactFormData) => {
+    setHasAttemptedSubmit(true);
     if (data.selectedServices.length === 0) {
-      // Show error for services
       return;
     }
     // Rest of your submit logic
@@ -179,7 +180,10 @@ const Footer: React.FC = () => {
                         <button
                           key={service}
                           type="button"
-                          onClick={() => handleServiceToggle(service)}
+                          onClick={() => {
+                            handleServiceToggle(service);
+                            setHasAttemptedSubmit(true);
+                          }}
                           className={`px-4 py-2 rounded-full text-xs md:text-sm transition-colors ${contactFormData.selectedServices?.includes(service)
                             ? "bg-white text-black"
                             : "bg-[#222226] text-white hover:bg-[#2a2a2e]"
@@ -189,7 +193,7 @@ const Footer: React.FC = () => {
                         </button>
                       ))}
                     </div>
-                    {contactFormData.selectedServices.length === 0 && (
+                    {hasAttemptedSubmit && contactFormData.selectedServices.length === 0 && (
                       <p className="text-red-500 text-sm">Please select at least one service</p>
                     )}
                   </div>
