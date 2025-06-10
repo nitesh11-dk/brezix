@@ -12,6 +12,8 @@ interface FormData {
     projectBudget?: string;
     service?: string;
     projectLink?: string;
+    company?: string;
+    phone?: string;
 }
 
 export interface DiscordMessage {

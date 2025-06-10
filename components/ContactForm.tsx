@@ -20,6 +20,7 @@ interface FormData {
 
 const ContactForm = () => {
     const [isFormOpen, setIsFormOpen] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Register callback for form opening
     useEffect(() => {
@@ -40,8 +41,15 @@ const ContactForm = () => {
         handleSubmit,
         reset,
         watch,
-        formState: { errors }
-    } = useForm<FormData>();
+        formState: { errors, isValid }
+    } = useForm<FormData>({
+        mode: "onChange",
+        defaultValues: {
+            name: "",
+            email: "",
+            project: ""
+        }
+    });
 
     // Watch form fields to pass current data to DiscordSender
     const formData = watch();
@@ -63,8 +71,14 @@ const ContactForm = () => {
 
     // On success handler
     const onSuccess = () => {
+        setIsSubmitting(false);
         reset();
         closeForm();
+    };
+
+    const onSubmit = async (data: FormData) => {
+        setIsSubmitting(true);
+        // Form submission logic will be handled by DiscordSender
     };
 
     return (
@@ -93,40 +107,49 @@ const ContactForm = () => {
                     </div>
 
                     <div className="flex-1 p-8 overflow-y-auto">
-                        {/* Wrap form submission with handleSubmit */}
-                        <form onSubmit={handleSubmit(() => { })} className="space-y-8 h-full flex flex-col">
+                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 h-full flex flex-col">
                             <div className="space-y-8 flex-1">
                                 <div className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
                                     <div className="w-full">
                                         <label htmlFor="name" className="text-lg font-semibold text-slate-800 block mb-3">
-                                            Name & Company
+                                            Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
-                                            {...register("name", { required: "Name is required" })}
+                                            {...register("name", {
+                                                required: "Name is required",
+                                                minLength: {
+                                                    value: 2,
+                                                    message: "Name must be at least 2 characters"
+                                                },
+                                                maxLength: {
+                                                    value: 50,
+                                                    message: "Name must be less than 50 characters"
+                                                }
+                                            })}
                                             type="text"
                                             id="name"
-                                            placeholder="John from Apple"
-                                            className={`w-full px-4 py-4 text-lg outline-none bg-transparent transition-colors duration-300 placeholder-slate-400 border rounded-lg ${errors.name ? 'border-red-500' : 'border-slate-200'}`}
+                                            placeholder="Your name"
+                                            className={`w-full px-4 py-4 text-lg outline-none bg-transparent transition-colors duration-300 placeholder-slate-400 border rounded-lg ${errors.name ? 'border-red-500 focus:border-red-500' : 'border-slate-200 focus:border-slate-400'}`}
                                         />
                                         {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>}
                                     </div>
 
                                     <div className="w-full">
                                         <label htmlFor="email" className="text-lg font-semibold text-slate-800 block mb-3">
-                                            Your Email
+                                            Email <span className="text-red-500">*</span>
                                         </label>
                                         <input
                                             {...register("email", {
                                                 required: "Email is required",
                                                 pattern: {
                                                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                                    message: "Invalid email address"
+                                                    message: "Please enter a valid email address"
                                                 }
                                             })}
                                             type="email"
                                             id="email"
-                                            placeholder="john@apple.com"
-                                            className={`w-full px-4 py-4 text-lg outline-none bg-transparent transition-colors duration-300 placeholder-slate-400 border rounded-lg ${errors.email ? 'border-red-500' : 'border-slate-200'}`}
+                                            placeholder="your.email@example.com"
+                                            className={`w-full px-4 py-4 text-lg outline-none bg-transparent transition-colors duration-300 placeholder-slate-400 border rounded-lg ${errors.email ? 'border-red-500 focus:border-red-500' : 'border-slate-200 focus:border-slate-400'}`}
                                         />
                                         {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>}
                                     </div>
@@ -134,14 +157,24 @@ const ContactForm = () => {
 
                                 <div className="space-y-3 flex-1 flex flex-col">
                                     <label htmlFor="project" className="text-lg font-semibold text-slate-800 block">
-                                        Tell us more about your project
+                                        Tell us about your project <span className="text-red-500">*</span>
                                     </label>
                                     <textarea
-                                        {...register("project", { required: "Project details are required" })}
+                                        {...register("project", {
+                                            required: "Please tell us about your project",
+                                            minLength: {
+                                                value: 10,
+                                                message: "Please provide more details (minimum 10 characters)"
+                                            },
+                                            maxLength: {
+                                                value: 1000,
+                                                message: "Please keep your message under 1000 characters"
+                                            }
+                                        })}
                                         id="project"
-                                        placeholder="Something about your great idea"
+                                        placeholder="Tell us about your project, goals, and requirements..."
                                         rows={8}
-                                        className={`w-full px-4 py-4 text-lg outline-none transition-colors duration-300 placeholder-slate-400 resize-none flex-1 border rounded-lg ${errors.project ? 'border-red-500' : 'border-slate-200'}`}
+                                        className={`w-full px-4 py-4 text-lg outline-none transition-colors duration-300 placeholder-slate-400 resize-none flex-1 border rounded-lg ${errors.project ? 'border-red-500 focus:border-red-500' : 'border-slate-200 focus:border-slate-400'}`}
                                     />
                                     {errors.project && <p className="mt-1 text-sm text-red-500">{errors.project.message}</p>}
                                 </div>
@@ -155,7 +188,6 @@ const ContactForm = () => {
                                     </a>
                                 </div>
 
-                                {/* DiscordSender takes current form data and sends it */}
                                 <DiscordSender formData={{
                                     name: formData.name,
                                     email: formData.email,
@@ -163,10 +195,26 @@ const ContactForm = () => {
                                 }} onSuccess={onSuccess}>
                                     <button
                                         type="submit"
-                                        className="w-full bg-slate-800 text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-slate-900 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl group"
+                                        disabled={!isValid || isSubmitting}
+                                        className={`w-full py-4 px-8 rounded-full font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-lg ${!isValid || isSubmitting
+                                                ? 'bg-slate-400 cursor-not-allowed'
+                                                : 'bg-slate-800 hover:bg-slate-900 hover:shadow-xl'
+                                            } text-white`}
                                     >
-                                        Submit the request
-                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                                        {isSubmitting ? (
+                                            <span className="flex items-center gap-2">
+                                                <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                                                </svg>
+                                                Sending...
+                                            </span>
+                                        ) : (
+                                            <>
+                                                Submit the request
+                                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                                            </>
+                                        )}
                                     </button>
                                 </DiscordSender>
                             </div>
