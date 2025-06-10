@@ -11,6 +11,7 @@ const CombinedPage = () => {
           height: '700px', // Adjust as needed
           border: 'none'
         }}
+        loading="eager"
       />
     </div>
   );
