@@ -12,6 +12,9 @@
     "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^3.9.1",
     "@iojcde/react-locomotive-scroll-v5": "^0.0.45",
+    "@react-three/drei": "^9.111.3",
+    "@react-three/fiber": "^8.17.6",
+    "@types/three": "^0.177.0",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -39,6 +42,7 @@
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.167.1",
     "vaul": "^0.9.6",
     "zod": "^3.24.1"
   },

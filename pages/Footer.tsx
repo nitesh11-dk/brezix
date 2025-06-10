@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import DiscordSender from "@/components/DiscordSender"; // adjust path if needed
+import Avt from "./Avt";
 
 // Create a global event bus for form control
 type FormEventCallback = () => void;
@@ -114,25 +115,24 @@ const Footer: React.FC = () => {
         <h1 className="text-white px-4 md:px-16 lg:px-32 text-2xl sm:text-4xl  xl:text-5xl text-left md:max-w-[85%] lg:max-w-7xl mb-6 md:mb-8 lg:mb-12">
           Ready to start the first phase of your project?
         </h1>
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-4">
           {/* Left Column */}
-          <div className="w-full md:w-[40%]  text-white flex flex-col items-center bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12">
+        <div className="w-full lg:w-[40%]  text-white flex flex-col items-center gap-4">
+        <div className="w-full  bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 md:mb-8 leading-tight text-center md:text-left">
               LET'S LAUNCH
               <br />
               TOGETHER!
             </h2>
-            <div className="w-full max-w-sm">
-              <img
-                src="/placeholder-image.png"
-                alt="Project Visual"
-                className="w-full h-auto opacity-50"
-              />
-            </div>
           </div>
 
+          <div className="hidden lg:flex w-full  bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12  items-center justify-center">
+          <Avt />
+          </div>
+        </div>
+
           {/* Right Column */}
-          <div className="w-full md:w-[40%]">
+          <div className="w-full lg:w-[40%]">
             <div className="bg-[rgb(29,28,39)] rounded-3xl p-6">
               <div className="flex mb-6 md:mb-8 border-b border-[#222226]">
                 <button
