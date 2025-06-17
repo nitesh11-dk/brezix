@@ -1,80 +1,77 @@
 export interface Service {
   title: string;
   description: string;
+  tagLine:string;
   image: string;
   bgColor: string;
   textColor: string;
   colSpan?: string;
 }
+
 export const servicesData: Service[] = [
   {
-    title: "App Development",
+    title: "🖥️ FuturOS Portfolio™",
     description:
-      "Building intelligent mobile and desktop apps that combine sleek design with performance. AI-enhanced, user-focused, and future-ready.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364730_Icon%20(1).svg",
+      "Turn your portfolio into a futuristic OS-style experience with 3D storytelling that feels alive. An AI agent talks, explains, and captures leads — this isn’t just a portfolio, it’s your personal brand’s power move.",
+    tagLine: "Personal branding that actually converts.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364734_Icon%20(5).svg",
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
-    colSpan: "",
   },
   {
-    title: "Web Development",
+    title: "🚀 SmartLaunch™ Page",
     description:
-      "We craft dynamic, responsive websites and platforms—infused with AI when needed, and always optimized for performance and UX.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364732_Icon%20(3).svg",
+      "AI-powered landing pages that speak, sell, and support – 24x7. Designed for speed, action, and results, these pages don't just sit there – they close leads for you automatically.",
+    tagLine: "Launch. Speak. Convert — automatically.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364732_Icon%20(3).svg",
     bgColor: "bg-[#493EFF]",
     textColor: "text-white",
     colSpan: "lg:col-span-2",
   },
   {
-    title: "3D Design & Development",
+    title: "🏠 ImmersiView™",
     description:
-      "Immersive 3D experiences for product showcases, real estate, and interactive storytelling—bringing your ideas into visual reality.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364733_Icon%20(4).svg",
+      "Create jaw-dropping 3D product and space tours powered by AI. Let users walk through your store, restaurant, salon, or real estate virtually – and let the agent guide, explain, and sell instantly.",
+    tagLine: "Your space becomes an interactive experience.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364733_Icon%20(4).svg",
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
-    colSpan: "",
   },
   {
-    title: "AI Agents & Chatbots",
+    title: "🤖 GenAI Apps™",
     description:
-      "From lead-gen bots to autonomous workflows—we build conversational AI and agentic systems that work smarter and sell harder.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364735_Icon%20(6).svg",
+      "Go beyond static websites. Add AI brains to your digital products – chatbots, voice advisors, dashboards, lead systems – all smart, all automated. Perfect for SaaS, clinics, and smart businesses.",
+    tagLine: "Build your AI-powered business engine.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364731_Icon%20(2).svg",
     bgColor: "bg-[#1E1D26]",
     textColor: "text-white",
     colSpan: "md:col-span-2 lg:col-span-1",
   },
   {
-    title: "Portfolio & Personal Branding",
+    title: "🧩 ThinkCustom™ Apps",
     description:
-      "We help individuals shine online. From sleek portfolios to personal brand storytelling—we shape your digital first impression.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364734_Icon%20(5).svg",
+      "Got a custom idea or business need? We’ll design and build it – web or mobile. From internal tools to customer-facing apps, CRMs to dashboards – whatever you need, fully tailored.",
+    tagLine: "Solution milta hai yahan.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364730_Icon%20(1).svg",
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
-    colSpan: "",
   },
   {
-    title: "AI-Powered Applications",
+    title: "📱 AppPrime™ Development",
     description:
-      "Applications driven by GenAI—search, automation, recommendations, data enrichment, and beyond. We embed AI where it matters.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364731_Icon%20(2).svg",
+      "Modern mobile apps built to get used – not ignored. From food menus to booking, salon to real estate – we design experiences that users love and AI agents that guide them.",
+    tagLine: "Jo app download kare, woh customer ban jaaye.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364736_Icon%20(7).svg",
     bgColor: "bg-[#1E1D26]",
     textColor: "text-white",
-    colSpan: "",
   },
   {
-    title: "Social Media Automation",
+    title: "🤖 AutoAgentOS™",
     description:
-      "Let AI run the repetitive hustle—content scheduling, DM automation, engagement tools, and smart workflows to grow your brand hands-free.",
-    image:
-      "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364736_Icon%20(7).svg",
+      "Meet your digital staff – AI agents that chat, talk, explain, and even follow up. Sales, support, booking, lead gen, reminders – fully automated and always-on. One system, full automation.",
+    tagLine: "Your AI-powered digital team.",
+    image: "https://cdn.prod.website-files.com/620fd9a3a41c4eda8151cee6/6569bfbae912016a67364735_Icon%20(6).svg",
     bgColor: "bg-[#1E1D26]",
     textColor: "text-white",
-    colSpan: "",
   },
 ];
