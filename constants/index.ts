@@ -115,7 +115,7 @@ export const testimonialData = [
 
 
 export const contactInfo = {
-  email: "info@brezix.com",
+  email: "hello@brezix.site",
   phones: {
     primary: "+91 9403080767",
     secondary: "+91 7414908496"

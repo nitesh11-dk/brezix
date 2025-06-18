@@ -13,6 +13,14 @@ const config: Config = {
       fontFamily: {
         'space-grotesk': ['var(--font-space-grotesk)'],
       },
+      animation: {
+        'bounce-slow': 'bounce 3s infinite',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

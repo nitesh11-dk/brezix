@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Service } from "./data";
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   service: Service;
@@ -18,6 +18,7 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
   const logoRef = useRef<HTMLImageElement | null>(null);
   const descRef = useRef<HTMLParagraphElement | null>(null);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const router = useRouter();
 
   // Handles responsive behavior
   useEffect(() => {
@@ -56,6 +57,7 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
 
   return (
     <div
+      onClick={() => router.push(`/services/${index +1}`)}
       className={`service-card cursor-pointer hover:opacity-80 ${baseBoxStyle} ${service.bgColor} ${service.textColor} ${service.colSpan ?? ""}`}
       data-index={index}
       style={{ flex: "1 1 0%" }}
@@ -82,14 +84,14 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
   {service.description}
   <br />
   <span className="block mt-6 text-sm italic text-right text-opacity-80">{service.tagLine}</span>
-<Link   href="/projects">
  <button
+       
   className="mt-3 block ml-auto text-sm px-4 py-2 rounded-lg 
              bg-white/10 backdrop-blur-md border border-white/20 
              shadow-md hover:bg-white/20 transition-all"
 >
   Discover
-</button></Link>
+        </button>
 </p>
     </div>
   );
