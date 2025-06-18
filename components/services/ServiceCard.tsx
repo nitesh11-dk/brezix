@@ -58,7 +58,7 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
   return (
     <div
       onClick={() => router.push(`/services/${index +1}`)}
-      className={`service-card cursor-pointer hover:opacity-80 ${baseBoxStyle} ${service.bgColor} ${service.textColor} ${service.colSpan ?? ""}`}
+      className={`service-card cursor-pointer hover:opacity-80 ${baseBoxStyle} ${service.bgColor} ${service.textColor} ${service.colSpan ?? ""} relative`}
       data-index={index}
       style={{ flex: "1 1 0%" }}
     >
@@ -71,28 +71,27 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
         />
       </div>
       <div className="text-left text-3xl my-1 font-normal">{service.title}</div>
-    <p
-  ref={descRef}
-  className="leading-tight font-normal text-xl text-justify md:mb-2 lg:block"
-  style={{
-    opacity: isSmallScreen ? 1 : 0,
-    transform: isSmallScreen ? "translateY(0)" : "translateY(20px)",
-    pointerEvents: isSmallScreen ? "auto" : "none",
-    transition: "none",
-  }}
->
-  {service.description}
-  <br />
-  <span className="block mt-6 text-sm italic text-right text-opacity-80">{service.tagLine}</span>
- <button
-       
-  className="mt-3 block ml-auto text-sm px-4 py-2 rounded-lg 
-             bg-white/10 backdrop-blur-md border border-white/20 
-             shadow-md hover:bg-white/20 transition-all"
->
-  Discover
+      <p
+        ref={descRef}
+        className="leading-tight font-normal text-md md:text-xl text-justify md:mb-2 lg:block"
+        style={{
+          opacity: isSmallScreen ? 1 : 0,
+          transform: isSmallScreen ? "translateY(0)" : "translateY(20px)",
+          pointerEvents: isSmallScreen ? "auto" : "none",
+          transition: "none",
+        }}
+      >
+        {service.description}
+        <br />
+        <span className="block mt-6 text-sm italic text-right text-opacity-80">{service.tagLine}</span>
+        <button
+          className="mt-3 block ml-auto text-sm px-4 py-2 rounded-lg 
+                   bg-white/10 backdrop-blur-md border border-white/20 
+                   shadow-md hover:bg-white/20 transition-all"
+        >
+          Discover
         </button>
-</p>
+      </p>
     </div>
   );
 };
