@@ -1,7 +1,7 @@
 import { NavLink } from "@/types";
 
 // Discord webhook URL from environment variable
-export const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "";
+export const DISCORD_WEBHOOK_URL = "https://discordapp.com/api/webhooks/1384833335343185961/0JsZZYg9ZM7i6yDlJa_mL-UZ93UWs1RQRSe0AOfasf0R4fCzVgrMP4NC4AHh4Z-kT9qF";
 
 export const navLinks: NavLink[] = [
   { label: 'About us', href: '#aboutus', animated: true },
