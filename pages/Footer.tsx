@@ -13,20 +13,23 @@ export const openContactForm = () => {
   formEventCallbacks.forEach(callback => callback());
 };
 
-const services = [
-  "AI-Based Mobile Apps",
-  "Web to App Conversion",
-  "Portfolio Website",
-  "UX/UI Design",
-  "3D Design",
-  "Landing Page",
-  "Chatbot Website",
-  "3D Product / Real Estate Showcase (VR-ready)",
-  "GenAI Web Applications",
-  "Custom Mobile App",
-  "Custom Website / Web App",
-  "Custom Desktop App",
+const serviceKeywords = [
+  "portfolio website",
+  "landing page",
+  "3D virtual tour",
+  "AI chatbot",
+  "voice assistant",
+  "AI-powered web apps",
+  "custom application developnment",
+  "mobile app development",
+  "website to app conversion",
+  "3D product showcase",
+  "real estate virtual tour",
+  "AI voice bot",
+  "virtual showroom",
 ];
+
+
 
 const budgetRanges = ["₹1k-₹5k", "₹5k-₹10k", "₹10k-₹20k", "₹20k+"];
 
