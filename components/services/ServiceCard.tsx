@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Service } from "./data";
 import { useRouter } from 'next/navigation';
+import { ArrowRight } from "lucide-react";
 
 interface Props {
   service: Service;
@@ -62,7 +63,7 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
       data-index={index}
       style={{ flex: "1 1 0%" }}
     >
-      <div className="min-w-28 flex items-center justify-center bg-white/15 backdrop-blur-lg rounded-full py-0.5">
+      <div className="min-w-28 pointer-events-none flex items-center justify-center bg-white/15 backdrop-blur-lg rounded-full py-0.5">
         <img
           ref={logoRef}
           src={service.image}
@@ -85,11 +86,14 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
         <br />
         <span className="block mt-6 text-sm italic text-right text-opacity-80">{service.tagLine}</span>
         <button
-          className="mt-3 block ml-auto text-sm px-4 py-2 rounded-lg 
+          className="mt-3 block ml-auto text-sm px-4 py-3 rounded-lg 
                    bg-white/10 backdrop-blur-md border border-white/20 
-                   shadow-md hover:bg-white/20 transition-all"
+                   shadow-md hover:bg-white/20 transition-all flex items-center gap-2 group"
         >
-          Discover
+          View More
+          <ArrowRight 
+            className="w-6 h-5 transition-transform duration-300 ease-in group-hover:-rotate-45" 
+          />
         </button>
       </p>
     </div>

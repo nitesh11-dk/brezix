@@ -13,22 +13,21 @@ export const openContactForm = () => {
   formEventCallbacks.forEach(callback => callback());
 };
 
-const serviceKeywords = [
-  "portfolio website",
-  "landing page",
-  "3D virtual tour",
-  "AI chatbot",
-  "voice assistant",
-  "AI-powered web apps",
-  "custom application developnment",
-  "mobile app development",
-  "website to app conversion",
-  "3D product showcase",
-  "real estate virtual tour",
-  "AI voice bot",
-  "virtual showroom",
+const servicesKeywords = [
+  "AI-Based Mobile Apps",
+  "Website to App Conversion",
+  "Modern Portfolio Website",
+  "UX/UI Design",
+  "3D Design & Animation",
+  "High-Converting Landing Pages",
+  "Chatbot-Integrated Website",
+  "3D Product Showcase (VR-ready)",
+  "Real Estate Virtual Tour",
+  "Custom GenAI Web Apps",
+  "Tailor-Made Mobile Apps",
+  "Custom Web Applications",
+  "Custom Desktop Applications"
 ];
-
 
 
 const budgetRanges = ["₹1k-₹5k", "₹5k-₹10k", "₹10k-₹20k", "₹20k+"];
@@ -125,21 +124,21 @@ const Footer: React.FC = () => {
     <footer id="contact-us" className="w-full bg-[rgb(20,19,30)]">
       <div className="w-full flex flex-col items-start justify-center py-8 md:py-12 lg:py-10">
         <hr className="w-[90%] md:w-[85%] lg:w-[82%] border-t border-gray-700 my-6 md:my-8 lg:my-10 mx-auto" />
-        <h1 className="text-white px-4 md:px-16 lg:px-32 text-2xl sm:text-4xl  xl:text-5xl text-left md:max-w-[85%] lg:max-w-7xl mb-6 md:mb-8 lg:mb-12">
+        <h1 className="text-white px-6 sm:px-8 md:px-16 lg:px-32 text-2xl sm:text-4xl xl:text-5xl text-left md:max-w-[85%] lg:max-w-7xl mb-6 md:mb-8 lg:mb-12">
           Ready to start the first phase of your project?
         </h1>
-        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-4">
+        <div className="container mx-auto px-6 sm:px-8 md:px-16 lg:px-32 flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-4">
           {/* Left Column */}
-          <div className="w-full lg:w-[40%]  text-white flex flex-col items-center gap-4">
-            <div className="w-full  bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 md:mb-8 leading-tight text-center md:text-left">
+          <div className="w-full lg:w-[40%] text-white flex flex-col items-center gap-4">
+            <div className="w-full bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 leading-tight text-center md:text-left">
                 LET'S LAUNCH
                 <br />
                 TOGETHER!
               </h2>
             </div>
 
-            <div className="hidden lg:flex w-full  bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12  items-center justify-center">
+            <div className="hidden lg:flex w-full bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12 items-center justify-center">
               <Avt />
             </div>
           </div>
@@ -149,7 +148,7 @@ const Footer: React.FC = () => {
             <div className="bg-[rgb(29,28,39)] rounded-3xl p-6">
               <div className="flex mb-6 md:mb-8 border-b border-[#222226]">
                 <button
-                  className={`flex-1 text-center py-3 md:py-4 text-base md:text-lg font-semibold transition-colors ${activeForm === "contact"
+                  className={`flex-1 text-center py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold transition-colors ${activeForm === "contact"
                     ? "text-white border-b-2 border-white"
                     : "text-gray-400 hover:text-gray-300 border-b-2 border-transparent"
                     }`}
@@ -158,7 +157,7 @@ const Footer: React.FC = () => {
                   Contact form
                 </button>
                 <button
-                  className={`flex-1 text-center py-3 md:py-4 text-base md:text-lg font-semibold transition-colors ${activeForm === "book_call"
+                  className={`flex-1 text-center py-3 md:py-4 text-sm sm:text-base md:text-lg font-semibold transition-colors ${activeForm === "book_call"
                     ? "text-white border-b-2 border-white"
                     : "text-gray-400 hover:text-gray-300 border-b-2 border-transparent"
                     }`}
@@ -175,11 +174,11 @@ const Footer: React.FC = () => {
                 >
                   {/* Services */}
                   <div className="space-y-3 md:space-y-4">
-                    <h4 className="text-base md:text-lg text-white mb-3 md:mb-4">
+                    <h4 className="text-sm sm:text-base md:text-lg text-white mb-3 md:mb-4">
                       Choose service <span className="text-red-500">*</span>
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
-                      {services.map((service) => (
+                      {servicesKeywords.map((service) => (
                         <button
                           key={service}
                           type="button"
@@ -187,7 +186,7 @@ const Footer: React.FC = () => {
                             handleServiceToggle(service);
                             setHasAttemptedSubmit(true);
                           }}
-                          className={`px-4 py-2 rounded-full text-xs md:text-sm transition-colors ${contactFormData.selectedServices?.includes(service)
+                          className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs md:text-sm transition-colors ${contactFormData.selectedServices?.includes(service)
                             ? "bg-white text-black"
                             : "bg-[#222226] text-white hover:bg-[#2a2a2e]"
                             }`}
@@ -197,7 +196,7 @@ const Footer: React.FC = () => {
                       ))}
                     </div>
                     {hasAttemptedSubmit && contactFormData.selectedServices.length === 0 && (
-                      <p className="text-red-500 text-sm">Please select at least one service</p>
+                      <p className="text-red-500 text-xs sm:text-sm">Please select at least one service</p>
                     )}
                   </div>
 

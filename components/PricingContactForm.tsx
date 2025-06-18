@@ -62,7 +62,7 @@ const PricingContactForm = ({ isOpen, onClose, serviceTitle, selectedPlan }: Pri
                 onClick={onClose}
             />
 
-            <div className="fixed bottom-4 right-4 w-full max-w-md bg-white rounded-2xl shadow-2xl z-50 transform transition-all duration-300">
+            <div className="fixed bottom-4  w-[96%] max-w-md bg-white rounded-2xl shadow-2xl z-50 left-1/2 -translate-x-1/2 md:left-auto md:right-4  md:translate-x-0 transition-all duration-300">
                 <div className="p-6">
                     <div className="flex items-center justify-between mb-6">
                         <h2 className="text-2xl font-bold text-slate-800">

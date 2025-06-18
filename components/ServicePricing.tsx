@@ -32,7 +32,7 @@ const ServicePricing = ({ pricingPlans, domainNote, serviceTitle }: ServicePrici
         <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Choose your perfect plan</p>
       </div>
 
-      <div className={`mx-auto mt-16 grid max-w-lg gap-y-6 sm:mt-20 sm:gap-y-0 gap-4 lg:max-w-4xl ${
+      <div className={`mx-auto mt-16 grid max-w-lg gap-y-6 sm:mt-20 sm:gap-y-4 gap-4 lg:max-w-4xl ${
         pricingPlans.length === 1 
           ? 'grid-cols-1 max-w-md' 
           : pricingPlans.length === 2 
