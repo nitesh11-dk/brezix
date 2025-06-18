@@ -1,7 +1,7 @@
 import { NavLink } from "@/types";
 
-// Add Discord webhook URL
-export const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1381145489918918666/Lp8ZHdR9wnRBmzoRE3xPGGPfchezmuCHV0kFX1VQ3wJkLJfY_gbp2uSz-zV3jSNpFWXd";
+// Discord webhook URL from environment variable
+export const DISCORD_WEBHOOK_URL = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK_URL || "";
 
 export const navLinks: NavLink[] = [
   { label: 'About us', href: '#aboutus', animated: true },
@@ -138,7 +138,7 @@ export const servicesData: Service[] = [
   {
     title: "UI/UX Design",
     description:
-      "Digital Alchemy - Transforming pixels into pure user delight. We fuse beauty and brains, sculpting interfaces that feel like second nature. Our creations aren’t just eye candy - they’re conversion machines.",
+      "Digital Alchemy - Transforming pixels into pure user delight. We fuse beauty and brains, sculpting interfaces that feel like second nature. Our creations aren't just eye candy - they're conversion machines.",
     image: "https://images.unsplash.com/photo-1549642055-32e6b216962f", // Updated Unsplash link for UI/UX
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
@@ -147,7 +147,7 @@ export const servicesData: Service[] = [
   {
     title: "Product Design",
     description:
-      "Innovation sculptors - Carving tomorrow’s must-haves from raw inspiration. We fine-tune each element to tackle genuine pain points and wow your target audience.",
+      "Innovation sculptors - Carving tomorrow's must-haves from raw inspiration. We fine-tune each element to tackle genuine pain points and wow your target audience.",
     image: "https://images.unsplash.com/photo-1621609764095-b040e3f05b0c", // Updated Unsplash link for Product Design
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
@@ -165,7 +165,7 @@ export const servicesData: Service[] = [
   {
     title: "Branding",
     description:
-      "Distilling your soul into visual gold. We craft brand DNA that screams ‘you’ without saying a word.",
+      "Distilling your soul into visual gold. We craft brand DNA that screams 'you' without saying a word.",
     image: "https://images.unsplash.com/photo-1517486804-d450974b76c8", // Updated Unsplash link for Branding
     bgColor: "bg-[#ECECFB]",
     textColor: "text-black",
