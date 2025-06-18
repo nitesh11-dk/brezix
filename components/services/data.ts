@@ -66,7 +66,7 @@ export const servicesData: Service[] = [
     textColor: "text-white",
   },
   {
-    title: "🤖 AutoAgentOS™",
+    title: "🤖 Chatbots & Automation™",
     description:
       "Meet your digital staff – AI agents that chat, talk, explain, and even follow up. Sales, support, booking, lead gen, reminders – fully automated and always-on. One system, full automation.",
     tagLine: "Your AI-powered digital team.",
