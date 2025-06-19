@@ -107,13 +107,13 @@ const ServicesGrid = () => {
         </div>
       </div> */}
 
-      <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row gap-4 mb-4 w-full" id="first-row">
+      <div className="flex flex-col lg:flex lg:flex-row gap-4 mb-4 w-full" id="first-row">
         {servicesData.slice(0, 4).map((service, index) => (
           <ServiceCard key={index} service={service} index={index} forwardedLogoRef={(el) => (logosRef.current[index] = el)} />
         ))}
       </div>
 
-      <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row gap-4 mb-4 w-full" id="second-row">
+      <div className="flex flex-col lg:flex lg:flex-row gap-4 mb-4 w-full" id="second-row">
         {servicesData.slice(4).map((service, index) => (
           <ServiceCard key={index + 4} service={service} index={index + 4} forwardedLogoRef={(el) => (logosRef.current[index + 4] = el)} />
         ))}

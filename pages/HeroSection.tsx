@@ -42,10 +42,10 @@ const HeroSection = () => {
           <div className="absolute w-full bottom-8 p-2  flex flex-col sm:bottom-10 sm:gap-8   md:pl-10    ">
             {/* Text + Icon Section */}
 
-            <div className="font-freigeist  text-[3.50rem] leading-[3.4rem]  z-10 flex-1 text-white  uppercase  md:text-9xl  md:w-fit md:leading-[7rem]">
+            <div className="font-freigeist  text-[3.50rem] leading-[3.4rem]  z-10 flex-1 text-white  uppercase  md:text-9xl  md:w-fit md:leading-[6.5rem]">
               <p className="font-normal">We Create</p>
 
-              <div className="text-right md:flex md:items-center md:ml-8 md:gap-10 font-bold tracking-tighter">
+              <div className="text-right md:flex md:items-center md:ml-8 md:gap-4 font-bold tracking-tighter">
                 {/* CircleButton for md+ */}
                 <div className="hidden md:flex">
                   <Link href="#aboutus">
@@ -83,7 +83,7 @@ const HeroSection = () => {
               <div className=" hidden  w-1/2 sm:flex  sm:w-5/6 lg:w-1/2 h-[2px] mb-6 bg-white"></div>
               <CustomerReviews />
               <div
-                className="lg:absolute bottom-4  right-20 md:ml-10 lg:ml-0 md:scale-110 lg:scale-125
+                className="lg:absolute bottom-3 right-16 md:ml-10 lg:ml-0 md:scale-110 lg:scale-125
   "
               >
                 <div className="relative  bg-red-200  w-72 h-44 mt-4 md:mt-12 md:w-2/3 md:h-64 lg:h-52   lg:w-80  lg:m-0  rounded-xl  ">

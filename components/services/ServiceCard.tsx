@@ -88,7 +88,7 @@ const ServiceCard = ({ service, index, forwardedLogoRef }: Props) => {
         <button
           className="mt-3 block ml-auto text-sm px-4 py-3 rounded-lg 
                    bg-white/10 backdrop-blur-md border border-white/20 
-                   shadow-md hover:bg-white/20 transition-all flex items-center gap-2 group"
+                   shadow-md hover:bg-white/20 transition-all flex items-center gap-2 group md:mt-8 lg:mt-2"
         >
           View More
           <ArrowRight 

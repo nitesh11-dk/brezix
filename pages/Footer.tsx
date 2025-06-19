@@ -14,20 +14,17 @@ export const openContactForm = () => {
 };
 
 const servicesKeywords = [
-  "AI-Based Mobile Apps",
-  "Website to App Conversion",
   "Modern Portfolio Website",
-  "UX/UI Design",
-  "3D Design & Animation",
   "High-Converting Landing Pages",
-  "Chatbot-Integrated Website",
+  "3D Design & Animation",
   "3D Product Showcase (VR-ready)",
-  "Real Estate Virtual Tour",
-  "Custom GenAI Web Apps",
+  " GenAI Web Apps",
   "Tailor-Made Mobile Apps",
   "Custom Web Applications",
-  "Custom Desktop Applications"
+  "Chatbot For Website",
+  "AI Agents , "
 ];
+
 
 
 const budgetRanges = ["₹1k-₹5k", "₹5k-₹10k", "₹10k-₹20k", "₹20k+"];
@@ -138,7 +135,7 @@ const Footer: React.FC = () => {
               </h2>
             </div>
 
-            <div className="hidden lg:flex w-full bg-[rgb(29,28,39)] rounded-3xl p-6 md:p-12 items-center justify-center">
+            <div className="hidden lg:flex w-full bg-[rgb(29,28,39)]  overflow-hidden  rounded-3xl p-6 md:p-12 items-center justify-center">
               <Avt />
             </div>
           </div>

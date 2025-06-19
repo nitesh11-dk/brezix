@@ -27,7 +27,7 @@ const ServicePage = () => {
       {/* Back Button */}
       <button
         onClick={() => router.push('/#services')}
-        className="fixed top-6 hidden sm:block left-6 z-50 flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white transition-all duration-200"
+        className="fixed top-6 hidden sm:block left-6 z-50 md:flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white/80 backdrop-blur-sm rounded-full shadow-sm hover:bg-white transition-all duration-200  "
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Home
