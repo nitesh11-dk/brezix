@@ -25,18 +25,35 @@ export default function RootLayout({
     <html lang="en" className={`${inter.className}`}>
       <body>
         <Providers>{children}</Providers>
+
         <Toaster
           position="top-right"
           toastOptions={{
             duration: 3000,
             style: {
-              background: '#333',
-              color: '#fff',
-              padding: '16px',
-              borderRadius: '8px',
+              background: "#333",
+              color: "#fff",
+              padding: "16px",
+              borderRadius: "8px",
             },
           }}
         />
+
+        {/* 👇 Chatling Chatbot Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.chtlConfig = { chatbotId: "2237726342" };
+            `,
+          }}
+        />
+        <script
+          async
+          data-id="2237726342"
+          id="chtl-script"
+          type="text/javascript"
+          src="https://chatling.ai/js/embed.js"
+        ></script>
       </body>
     </html>
   );
